@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+</head>
+
+<body>
+    <form action="php/login.php" method="POST">
+        用户名：<input type="text" class="username" /><br>
+        密&nbsp;&nbsp;码:<input type="text" class="userpwd" /><br>
+        <button type="submit" class="submit">提交</button>
+    </form>
+    <script src="js/ajax2.0.js"></script>
+    <script>
+        var logintest = (function () {
+            var $username = document.querySelector('.username');
+            var $userpwd = document.querySelector('.userpwd');
+            var $submit = document.querySelector('.submit');
+            return {
+                init() {
+                    this.event();
+                },
+                event() {
+                    var _this = this;
+                    $submit.click = function () {
+                        console.log($username.value);
+                        console.log($userpwd.value);
+                        console.log($submit);
+                        sendAjax(
+                            'php/login.php'
+                            // {
+                            //     'login_name': $username.value,
+                            //     'password': $userpwd.value
+                            // }
+                        )
+                    }
+
+                }
+            }
+        }())
+        logintest.init();
+    </script>
+</body>
+
+</html>
