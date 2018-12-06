@@ -26,7 +26,7 @@
             $num = mysqli_num_rows($result);  
             if($num)  
             {  
-                $row = mysqli_fetch_array($result);  //将数据以索引方式储存在数组中  
+                // $row = mysqli_fetch_array($result);  //将数据以索引方式储存在数组中  
                 //echo $row[0];
                 echo "<script>alert('登录成功！');</script>";  
             }  

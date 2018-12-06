@@ -31,11 +31,11 @@
                         console.log($userpwd.value);
                         console.log($submit);
                         sendAjax(
-                            'php/login.php'
-                            // {
-                            //     'login_name': $username.value,
-                            //     'password': $userpwd.value
-                            // }
+                            'php/login.php',
+                            {
+                                'login_name': $username.value,
+                                'password': $userpwd.value
+                            }
                         )
                     }
 
