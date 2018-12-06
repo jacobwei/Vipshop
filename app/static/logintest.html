@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <form action="php/login.php" method="POST">
-        用户名：<input type="text" class="username" /><br>
-        密&nbsp;&nbsp;码:<input type="text" class="userpwd" /><br>
+    <form action="../../server/php/login.php" method="POST">
+        用户名：<input type="text" class="username" name="username" /><br>
+        密&nbsp;&nbsp;码:<input type="password" class="userpwd"  name="userpwd"/><br>
         <button type="submit" class="submit">提交</button>
     </form>
     <script src="js/ajax2.0.js"></script>
@@ -31,10 +31,10 @@
                         console.log($userpwd.value);
                         console.log($submit);
                         sendAjax(
-                            'php/login.php',
+                            '../../server/php/login.php',
                             {
-                                'login_name': $username.value,
-                                'password': $userpwd.value
+                                'login_name' : $username.value,
+                                'password' : $userpwd.value
                             }
                         )
                     }
