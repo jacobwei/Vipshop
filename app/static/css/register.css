@@ -64,53 +64,86 @@
 .form_body{
     padding:38px 38px 0;
 }
+.form_body div{
+    position: relative;
+}
+
+
+.form_body .text{
+    color: red;
+    height: 33px;
+    line-height: 33px;
+    width: 374px;
+}
+.form_body .inputerror{
+    border: 1px solid red;
+}
+.form_body .inputsuccess{
+    border:1px solid green;
+}
+
+
+.form_body .iconfont{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 25px;
+    color: #cccccc;
+}
 .form_body input{
     box-sizing: border-box;
     border:1px solid #b2b2b2;
-    color: #b2b2b2;
+    color: #000000;
     font-size: 18px;
     border-radius: 3px;
-    margin-bottom: 33px;
+    /* margin-bottom:33px; */
+    padding-left: 50px;
 }
-.form_body>input:nth-of-type(1){
+.form_body #phone{
     width: 374px;
     height: 57px;  
 }
-.form_body input:nth-of-type(2){
+.form_body #code{
     width: 197px;
     height: 57px;  
 }
-.form_body input:nth-of-type(3){
+.form_body #getcode{
     width: 165px;
     height: 57px; 
     background:#d0d0d0;
     color: #9999a7;
     float: right;
+    padding:0;
+    cursor: not-allowed;
 }
-.form_body input:nth-of-type(4){
+.form_body #password{
     width: 374px;
     height: 57px;  
 }
-.form_body input:nth-of-type(5){
+.form_body #repassword{
     width: 374px;
     height: 57px;  
 }
-.form_body input:nth-of-type(6){
+.form_body #submit{
     width: 374px;
     height: 57px;
     margin-top: 40px;
     background: #f10180;
-    color: #ffffff;  
+    color: #ffffff;
+    padding: 0;  
+    cursor: pointer;
 }
-.form_body div input{
+.form_body #checkbox{
     margin:0 8px 0 0;
+    width: 19px;
+    height: 16px;
 }
-.form_body p{
+.form_body label p{
     line-height: 24px;
     font-size: 14px;
     display: inline;
 }
-.form_body p a{
+.form_body label p a{
     font-size: 14px;
     color: #1d94d1;
 }
