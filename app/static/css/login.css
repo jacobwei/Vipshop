@@ -1,0 +1,133 @@
+#header_box{
+    height: 125px;
+    background: #ffffff;
+}
+.header{
+    margin:0 auto;
+    width: 1250px;
+    height: 100%;
+}
+.header .logo{
+    float: left;
+    width: 156px;
+    height: 63px;
+    margin-top: 30px;
+    text-indent:-9999px;
+    background:url(../images/rigister/zhuce_03.jpg)no-repeat;
+}
+.header .promise{
+    float: right;
+    width: 370px;
+    height: 29px;
+    margin-top: 50px;
+    background:url(../images/rigister/zhuce_06.jpg)no-repeat;
+}
+#main_box{
+    height:810px;
+    background: #faa8ac;
+}
+.main{
+    margin: 0 auto;
+    width: 1250px;
+    height: 100%;
+    background:url(../images/rigister/banner_03.jpg)no-repeat;
+}
+.main .login{
+    width: 450px;
+    float:right;
+    margin-top: 63px;
+}
+.login .login_title{
+    background: #ffffff;
+    width: 450px;
+    height: 62px;
+    border-bottom:1px solid #e0e0e0;
+}
+.login .login_title a{
+    text-align: center;
+    float: left;
+    width: 224px;
+    height: 62px;
+    color: #666666; 
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 62px;
+}
+.login .login_title a:hover{
+    color: #f10180;
+}
+.login .login_title a:nth-of-type(1){
+    color: #f10180;
+}
+.login .login_title i{
+    float: left;
+    color: #e0e0e0;
+    width: 2px;
+    line-height: 62px;
+    font-size: 22px;
+}
+/* 账户登录页css开始 */
+.login_account{
+    width: 450px;
+    height: 413px;
+    background: #ffffff;
+}
+/* 账户登录页css结束 */
+
+.login_foot{
+    box-sizing: border-box;
+    width: 450px;
+    height: 88px;
+    background: #ffffff;
+    padding: 0 37px;
+}
+.login_foot .foot_main{
+    position: relative;
+    width: 375px;
+    height: 88px;
+    padding-top: 45px;
+    border-top: 1px solid #e0e0e0;
+}
+.foot_main .wechat{
+    display: block;
+    position: absolute;
+    top:-20px;
+    left: 162px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/rigister/sprites-hash-701a8168.png) no-repeat;
+    background-position:-300px -161px; 
+}
+.foot_main ul{
+    width: 185px;
+    height: 18px;
+    float: left;
+}
+.foot_main ul li{
+    overflow: hidden;
+    float: left;
+}
+.foot_main ul li a{
+    color: #333333;
+    font-size: 16px;
+}
+.foot_main ul i{
+    float: left;
+    color: #e0e0e0;
+    margin: 0 10px;
+}
+.foot_main span{
+    float: left;
+    margin-left: 40px;
+    font-size: 16px;
+    color: #999999;
+    cursor: pointer;
+}
+.foot_main>a{
+    float: right;
+    font-size: 18px;
+    color: #000000;
+}
+.foot_main a:hover{
+    color: #f10180;
+}
