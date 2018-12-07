@@ -6,7 +6,7 @@
 // });
 var gulp = require('gulp'); //加载gulp
 var uglify = require('gulp-uglify'); //加载js压缩
-var babel = require('gulp-babel');//转义ES6转成ES5
+var babel = require('gulp-babel');//转义,ES6转成ES5
 var connect = require('gulp-connect');//连接服务器
 var concat = require('gulp-concat'); //合并文件
 var rename = require("gulp-rename");//文件重命名
@@ -17,7 +17,18 @@ const htmlmin = require("gulp-htmlmin");//压缩HTML
 const runSequence = require("run-sequence") //控制多个任务同步执行或者异步执行
 
 //压缩JS
-gulp.task('minijs', function () {
+gulp.task('minijs',function(){
+    gulp.src('app/static/js/*.js')
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(rev())
+    .pipe(gulp.dest('./dist'))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest('rev'))
+    
+})
+
+/*gulp.task('minijs', function () {
     gulp.src('app/static/js/*.js')
         //先转义，不然会报错
         .pipe(babel({
@@ -31,12 +42,12 @@ gulp.task('minijs', function () {
         //     //添加后缀
         //     suffix:'.min'
         // }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('./dist'))
         .pipe(rev.manifest())
         .pipe(gulp.dest('rev/js'))
         //压缩完成执行重新加载，实现页面与代码实时更新
         .pipe(connect.reload());
-});
+});*/
 //合并JS
 gulp.task('concatJs', function () {
     gulp.src('app/static/**/*.js')
@@ -48,7 +59,7 @@ gulp.task('connect', function () {
     connect.server(
         {
             root:'dist',//设置根目录，建议设置成dist，也就是项目上线发送给客户看的文件夹
-            port:8888,//监听的服务器端口号
+            port:7777,//监听的服务器端口号
             livereload:true//热更新（实时更新）
         }
     )

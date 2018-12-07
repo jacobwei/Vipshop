@@ -107,14 +107,25 @@
     width: 197px;
     height: 57px;  
 }
-.form_body #getcode{
+.form_body .notgetcode{
+    border: 0;
     width: 165px;
     height: 57px; 
     background:#d0d0d0;
     color: #9999a7;
     float: right;
-    padding:0;
-    cursor: not-allowed;
+    cursor: not-allowed; 
+    font-size: 18px;
+}
+.form_body .getcode{
+    border: 1px solid #fed3e8;
+    width: 165px;
+    height: 57px; 
+    background:#fcedf2;
+    color: #e00078;
+    float: right;
+    cursor: pointer; 
+    font-size: 18px;
 }
 .form_body #password{
     width: 374px;

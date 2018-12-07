@@ -1,10 +1,7 @@
-<?php
-    //判断是否点击了"提交"按钮
-    // if(isset($_POST["submit"]) && $_POST["submit"] == "登录")  
-    // {   
+<?php   
         //获取用户名、密码
-        $user = $_POST["username"];  
-        $psw = $_POST["userpwd"];  
+        $user = $_GET["username"];
+        $psw = $_GET["userpwd"];  
         //如果用户名或密码为空
         if($user == "" || $psw == "")  
         {  
@@ -33,13 +30,8 @@
             }  
             else  
             {  
-                echo "<script>alert('用户名或密码不正确！');</script>";
+                echo "<script>alert('用户名或密码不正确！');history.go(-1);</script>";
                 // history.go(-1);  
             }  
-        }  
-    // }  
-    // else  
-    // {  
-    //     echo "<script>alert('提交失败！'); history.go(-1);</script>";  
-    // }  
+        }   
 ?>

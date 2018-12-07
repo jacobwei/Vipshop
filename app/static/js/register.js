@@ -18,11 +18,13 @@ var register = (function(){
         init(ele){
             this.$ele = document.querySelector(ele);
             this.$inputAll = this.$ele.querySelectorAll('input');
+            this.$phone = this.$ele.querySelector('#phone');
+            this.$code = this.$ele.querySelector('#code');
+            this.$getcode = this.$ele.querySelector('#getcode');
             this.$password = this.$ele.querySelector('#password');
             this.$repassword = this.$ele.querySelector('#repassword');
             this.$checkbox = this.$ele.querySelector('#checkbox');
             this.$submit = this.$ele.querySelector('#submit');
-            // console.log(this.$checkbox);
             this.event();
         },
         event(){
@@ -51,6 +53,37 @@ var register = (function(){
                     $p.innerHTML = '';
                 }
             }
+/* 发送验证码按钮的开关--开始 */
+            this.$phone.addEventListener("blur",function(){
+                _this.$getcode.className = 'notgetcode';
+                if(_this.$phone.className.indexOf('inputsuccess') != -1){
+                    _this.$getcode.className = 'getcode';
+                    _this.$getcode.removeAttribute('disabled');
+                }
+            })
+/* 发送验证码按钮的开关--结束 */
+/* 发送验证码--开始 */
+            this.$getcode.onclick = function(e){
+                sendcode();
+                this.setAttribute('disabled','true');
+                e = e || window.event;
+                e.preventDefault ? e.preventDefault() : e.returnValue = false;
+                var count=5; 
+                var _this = this;
+                var interval = setInterval(function(){
+                    count --;
+                    _this.className = 'notgetcode';
+                    _this.innerHTML = count +'s后重新发送';
+                    if(count == 0){
+                        _this.removeAttribute('disabled'); 
+                        _this.className = 'getcode';
+                        _this.innerHTML = '获取验证码';                      
+                        clearInterval(interval);
+                    }
+                },1000)
+            }
+/* 发送验证码--结束 */
+/* 验证两次密码--开始 */
             this.$repassword.onblur = function(){
                 var $p = this.parentNode.querySelector('.text');
                 if(this.value == ''){
@@ -65,6 +98,7 @@ var register = (function(){
                     }
                 }
             }
+/* 验证两次密码--结束 */
             this.$checkbox.onclick = function(){
                 var $p = this.parentNode.querySelector('.text');
                 flag = !flag;
@@ -76,25 +110,29 @@ var register = (function(){
                     $p.innerHTML = this.getAttribute('error'); 
                 }
             }
+/* 提交注册--开始 */
             this.$submit.onclick = function(){
                 var $pAll = this.parentNode.querySelectorAll('.text');
-                // console.log($pAll);
                 for(let i = 0; i < $pAll.length; i++){
-                    if($pAll[i].className.indexOf('inputsuccess') == -1){
-                        $pAll[i].innerHTML = $pAll[i].parentNode.querySelector('input').getAttribute('error');
+                    var bool = $pAll[i].parentNode.querySelector('input').className.indexOf('inputsuccess');
+                    if(bool == -1){
+                        $pAll[i].innerHTML = $pAll[i].parentNode.querySelector('input').getAttribute('error');                
                     }
+                    return;
                 }
-                // alert('chenggong');
-                sendAjax(
-                    '../../../server/php/register.php',
-                    {
-                        "userphone":$inputAll['phone'].value,
-                        "userpwd":$inputAll['password'].value,
-                        
-                    }
-                )
+                
             }
-        }
+/* 提交注册--结束 */
+        },
+/* 生成6位随机验证码--开始 */
+            /* sendcode(){
+                var code = '';
+                for(var i = 0;i < 6;i ++){
+                    var num = Math.Math.random
+                }
+            } */
+
+/* 生成6位随机验证码--结束 */
     }
 }())
 register.init('.form_body');
