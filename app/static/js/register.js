@@ -8,12 +8,12 @@ var checkInput = {
         return reg.test(str);
     },
     code(str){
-        var reg = /^\d{6}$/
-        return reg.test(str);
+        return false;
     }
 }
 var register = (function(){
     var flag = false;
+    var newcode;
     return {
         init(ele){
             this.$ele = document.querySelector(ele);
@@ -24,7 +24,7 @@ var register = (function(){
             this.$password = this.$ele.querySelector('#password');
             this.$repassword = this.$ele.querySelector('#repassword');
             this.$checkbox = this.$ele.querySelector('#checkbox');
-            this.$submit = this.$ele.querySelector('#submit');
+            this.$submit = this.$ele.querySelector('#submit');           
             this.event();
         },
         event(){
@@ -63,26 +63,41 @@ var register = (function(){
             })
 /* 发送验证码按钮的开关--结束 */
 /* 发送验证码--开始 */
-            this.$getcode.onclick = function(e){
-                sendcode();
+            this.$getcode.onclick = function(e){ 
+                var code = _this.sendcode();
+                newcode = code;
+    /* 利用弹窗把验证码发送给用户 */               
+                alert('验证码：'+ code);
                 this.setAttribute('disabled','true');
                 e = e || window.event;
                 e.preventDefault ? e.preventDefault() : e.returnValue = false;
                 var count=5; 
-                var _this = this;
+                var _this_ = this;
                 var interval = setInterval(function(){
                     count --;
-                    _this.className = 'notgetcode';
-                    _this.innerHTML = count +'s后重新发送';
+                    _this_ .className = 'notgetcode';
+                    _this_ .innerHTML = count +'s后重新发送';
                     if(count == 0){
-                        _this.removeAttribute('disabled'); 
-                        _this.className = 'getcode';
-                        _this.innerHTML = '获取验证码';                      
+                        _this_ .removeAttribute('disabled'); 
+                        _this_ .className = 'getcode';
+                        _this_ .innerHTML = '获取验证码';                      
                         clearInterval(interval);
                     }
                 },1000)
             }
 /* 发送验证码--结束 */
+/* 验证验证码--开始 */
+            this.$code.addEventListener('blur',function(){
+                var $p = this.parentNode.querySelector('.text');
+                if(this.value === newcode){
+                    this.setAttribute ('class','inputsuccess');
+                    $p.innerHTML = '';
+                }else{
+                    this.setAttribute('class','inputerror');
+                    $p.innerHTML = this.getAttribute('error');
+                }
+            })
+/* 验证验证码--结束 */
 /* 验证两次密码--开始 */
             this.$repassword.onblur = function(){
                 var $p = this.parentNode.querySelector('.text');
@@ -125,13 +140,14 @@ var register = (function(){
 /* 提交注册--结束 */
         },
 /* 生成6位随机验证码--开始 */
-            /* sendcode(){
+            sendcode(){
                 var code = '';
                 for(var i = 0;i < 6;i ++){
-                    var num = Math.Math.random
-                }
-            } */
-
+                    var num = Math.floor(Math.random()*9);
+                    code += num;
+                }  
+                return code;
+            }
 /* 生成6位随机验证码--结束 */
     }
 }())
