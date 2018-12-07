@@ -8,7 +8,7 @@ var checkInput = {
         return reg.test(str);
     },
     code(str){
-        var reg = /^\d{6}$/
+        var reg = /^\d{6}$/;
         return reg.test(str);
     }
 }
@@ -84,7 +84,15 @@ var register = (function(){
                         $pAll[i].innerHTML = $pAll[i].parentNode.querySelector('input').getAttribute('error');
                     }
                 }
-                alert('chenggong');
+                // alert('chenggong');
+                sendAjax(
+                    '../../../server/php/register.php',
+                    {
+                        "userphone":$inputAll['phone'].value,
+                        "userpwd":$inputAll['password'].value,
+                        
+                    }
+                )
             }
         }
     }
