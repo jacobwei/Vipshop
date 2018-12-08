@@ -8,8 +8,7 @@ var checkInput = {
         return reg.test(str);
     },
     code(str){
-        var reg = /^\d{6}$/;
-        return reg.test(str);
+        return false;
     }
 }
 var register = (function(){
@@ -128,6 +127,7 @@ var register = (function(){
             }
 /* 提交注册--开始 */
             this.$submit.onclick = function(){
+                console.log(1);
                 var $pAll = this.parentNode.querySelectorAll('.text');
                 for(let i = 0; i < $pAll.length; i++){
                     var bool = $pAll[i].parentNode.querySelector('input').className.indexOf('inputsuccess');
@@ -136,7 +136,8 @@ var register = (function(){
                     }
                     return;
                 }
-                
+                console.log(2);
+                alert('注册成功');
             }
 /* 提交注册--结束 */
         },

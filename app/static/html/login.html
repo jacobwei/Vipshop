@@ -20,33 +20,47 @@
     </div>
     <div id="main_box">
         <div class="main">
+<!-- 登录部分开始 -->
             <div class="login">
 <!-- 登录头部开始 -->
                 <div class="login_title">
-                    <a class="" href="">扫码登录</a>
+                    <div class="sweep">扫码登录</div>
                     <i>|</i>
-                    <a href="">账户登录</a>
+                    <div class="account">账户登录</div>
                 </div>
 <!-- 登录头部结束 -->
+<!-- 二维码登录开始 -->
+                <div class="login_sweep">
+                    <div class="ercode">
+                        <span class="code_img"></span>
+                    </div>
+                    <div class="phone">
+                        <span class="phone_img"></span>
+                    </div>
+                    <p>打开<i>唯品会APP-个人中心</i>，扫一扫登录</p>
+                </div>
+<!-- 二维码登录结束 -->
 <!-- 账户登录页开始 -->
                 <div class="login_account">
-                    <form class="form" action="" method="GET">
+                    <form class="form" action="" method="POST">
                         <div class="form_body">
                             <div>
-                                <input type="text" name="username" id="username" placeholder="手机号/用户名/邮箱">
+                                <input type="text" name="username" id="username" placeholder="手机号/用户名/邮箱" empty="请输入登录名">
                                 <i class="iconfont icon-shouji"></i>
                                 <p class="text"></p>
                             </div>
                             <div>
-                                <input type="text" name="userpassword" id="userpassword" placeholder="密码">
+                                <input type="text" name="userpassword" id="userpassword" placeholder="密码" empty="请输入密码">
                                 <i class="iconfont icon-suo"></i>
                                 <p class="text"></p>
                             </div>
                             <div>
-                                <input type="checkbox" name="checkbox" id="checkbox">记住用户名
+                                <label>
+                                    <input type="checkbox" name="checkbox" id="checkbox">记住用户名
+                                </label>
                                 <a href="">忘记密码</a>
                             </div>
-                            <button>登录</button>
+                            <button class="login_btn">登录</button>
                         </div>
                     </form>
                 </div>
@@ -68,13 +82,14 @@
                 </div>
 <!-- 登录尾部结束 -->
             </div>
+<!-- 登录部分结束 -->
         </div>
     </div>
     <div id="footer_box">
         <p class="footer">Copyright 2008-2018 vip.com，All Rights Reserved ICP证：粤 B2-20080329</p>
     </div>
 
-
+<script src="../js/login.js"></script>
 </body>
 
 </html>

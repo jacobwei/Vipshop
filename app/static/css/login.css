@@ -43,34 +43,149 @@
     height: 62px;
     border-bottom:1px solid #e0e0e0;
 }
-.login .login_title a{
+.login .login_title div{
     text-align: center;
     float: left;
     width: 224px;
-    height: 62px;
-    color: #666666; 
+    height: 62px; 
     font-size: 22px;
     font-weight: 900;
     line-height: 62px;
+    cursor: pointer;
 }
-.login .login_title a:hover{
+.login .login_title div:hover{
     color: #f10180;
 }
-.login .login_title a:nth-of-type(1){
+.login_title .sweep {
     color: #f10180;
 }
-.login .login_title i{
+.login_title .account {
+    color: #666666;
+}
+
+.login_title i{
     float: left;
     color: #e0e0e0;
     width: 2px;
     line-height: 62px;
     font-size: 22px;
 }
+/* 二维码登录页css开始 */
+.login_sweep{
+    display: block;
+    height:392px;
+    width:450px;
+    background: #ffffff;
+    position: relative;
+}
+.ercode{
+    width:215px;
+    height: 215px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    padding: 30px;
+    position: absolute;
+    top: 57px;
+    left: 118px;
+}
+.ercode .code_img{
+    display: block;
+    width: 155px;
+    height: 155px;
+    background: url(../images/rigister/login_sweep_03.jpg)no-repeat;
+}
+.phone{
+    display: none;
+    opacity: 0;
+    width: 150px;
+    height: 240px;
+    position: absolute;
+    top: 45px;
+    right: 37px;
+}
+.phone .phone_img{
+    display: inline-block;
+    width: 150px;
+    height: 240px;
+    background: url(../images/rigister/login_phone_03.jpg)no-repeat;
+}
+.login_sweep p{
+    width: 450px;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+    position: absolute;
+    bottom: 64px;
+}
+.login_sweep p i{
+    color: #f10180;
+}
+/* 二维码登录页css结束 */
+
 /* 账户登录页css开始 */
 .login_account{
     width: 450px;
     height: 413px;
     background: #ffffff;
+    box-sizing: border-box;
+    padding: 50px 37px 0 37px ;
+    display: none;
+}
+.form_body div{
+    position: relative;
+}
+.form_body div .iconfont{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 25px;
+    color: #cccccc;
+}
+.form_body div:nth-of-type(3) label{
+    font-size: 14px;
+    color: #333333;
+}
+.form_body div:nth-of-type(3) input{
+    margin-right: 14px;
+}
+.form_body div:nth-of-type(3) a{
+    float: right;
+    font-size: 14px;
+    color: #333333;
+}
+.form_body div:nth-of-type(3) a:hover{
+    color: #f10180;
+}
+.form_body input{
+    width: 375px;
+    height:57px;
+    box-sizing: border-box;
+    border: 1px solid #999999;
+    font-size: 18px;
+    border-radius: 3px;
+    padding-left: 50px;
+}
+.form_body #checkbox{
+    width: 16px;
+    height: 16px;
+    border: 1px solid #e0e0e0;
+}
+.form_body .text{
+    color: red;
+    height: 33px;
+    line-height: 33px;
+    width: 374px;
+}
+.form_body .login_btn{
+    width: 374px;
+    height: 57px;
+    margin-top: 40px;
+    background: #f10180;
+    color: #ffffff;
+    border: 0;  
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 /* 账户登录页css结束 */
 
@@ -130,4 +245,16 @@
 }
 .foot_main a:hover{
     color: #f10180;
+}
+#footer_box{
+    height: 104px;
+    background: #ffffff;
+}
+.footer{
+    font-size: 16px;
+    margin: 0 auto;
+    width: 1250px;
+    color: #666666;
+    line-height: 104px;
+    text-align: center;
 }
