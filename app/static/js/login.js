@@ -8,8 +8,8 @@ var login = (function () {
             this.$login_account = this.$ele.querySelector('.login_account');
             this.$sweepchild = this.$login_sweep.children;
             this.ercodeleft = parseInt(this.getStyle(this.$sweepchild[0], 'left'));
-            // this.ercodeleft = parseInt(this.getStyle(this.$sweepchild[0], 'left'));
-
+            this.$inputAll = this.$ele.querySelectorAll('input');
+            this.$submit = this.$ele.querySelector('.login_btn');           
             this.event();
         },
         event() {
@@ -26,6 +26,20 @@ var login = (function () {
                 _this.$title_sweep.style.color = '#f10180';
                 _this.$title_account.style.color = '#666666';
             }
+/* 内容为空提示--开始 */
+            for(let i = 0;i < this.$inputAll.length - 2;i++){
+                this.$inputAll[i].onblur = function(){
+                    var $p = this.parentNode.querySelector('.text');
+                    if(this.value == ''){
+                        this.setAttribute('class','inputerror');
+                        $p.innerHTML = this.getAttribute('empty');
+                    }else{
+                        this.setAttribute ('class','inputsuccess');
+                        $p.innerHTML = '';
+                        }
+                    }
+                }
+/* 内容为空提示--结束 */
 /* 鼠标滑进二维码，手机显示--开始 */
             this.$login_sweep.onmouseenter = function () {
                 var _this_ = _this;
@@ -64,6 +78,21 @@ var login = (function () {
                 },500)
         }
 /* 鼠标移出--结束 */
+/* 提交登录--开始 */
+            this.$submit.onclick = function(){
+                var $pAll = this.parentNode.querySelectorAll('.text');
+                for(let i = 0; i < $pAll.length - 2; i++){
+                    var bool = $pAll[i].parentNode.querySelector('input').className.indexOf('inputsuccess');
+                    if(bool == -1){
+                        $pAll[i].innerHTML = $pAll[i].parentNode.querySelector('input').getAttribute('error');                
+                        return false;
+                    }
+                }
+                alert('登录成功');
+                sendAjax()
+            }
+/* 提交登录--结束 */
+
         },
         getStyle(el, attr) {
             if (window.getComputedStyle) {

@@ -131,6 +131,18 @@
     padding: 50px 37px 0 37px ;
     display: none;
 }
+.form_body .text{
+    color: red;
+    height: 33px;
+    line-height: 33px;
+    width: 374px;
+}
+.form_body .inputerror{
+    border: 1px solid red;
+}
+.form_body .inputsuccess{
+    border:1px solid green;
+}
 .form_body div{
     position: relative;
 }

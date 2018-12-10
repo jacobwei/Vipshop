@@ -1,6 +1,6 @@
 <?php
-    $phone = $_POST['phone'];
-    $pwd = $_POST['password'];
+    $phone = $_GET['phone'];
+    $pwd = $_GET['password'];
     $coon = new mysqli('localhost', 'root', '', 'vipshop_userinfo', 3306);
     $sql = "SELECT userphone FROM userinfo where userphone = '$phone'";//查询语句：数据库中是否存在该号码
     $coon->query("SET CHARACTER SET 'utf8'");//读库   
