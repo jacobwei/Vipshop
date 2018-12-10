@@ -24,11 +24,143 @@
     float: right;
 }
 .right_service .nav{
-
+    width: 570px;
+    height: 27px;
+    font-size: 12px;
+    color: #808080;
+    box-sizing: border-box;
+    padding: 13px;
+}
+.right_service .nav a{
+    color: #808080;
+}
+.right_service .nav div{
+    display: inline-block;
+}
+.nav a:hover{
+    color: #000;
+}
+.nav .username{
+    float: left; 
+}
+.title_line{
+    width: 1px;
+    height: 12px;
+    margin: 0 12px;
 }
 .split-line{
     display: inline-block;
-    width: 1px;
-    height: 12px;
     background: #b3b3b3;
+    width: 1px;
+    vertical-align: middle;
+}
+.promise{
+    margin: 15px;
+    float: right;
+}
+#body_box{
+    background: #ffffff;
+}
+.body{
+    width: 960px;
+    margin: 0 auto;
+}
+.flow{
+    width: 960px;
+    height: 140px;
+    box-sizing: border-box;
+    padding: 30px 178px;
+}
+.step{
+    float: left;
+    width: 100px;
+    height: 84px;
+}
+.step p{
+    font-size: 14px;
+    text-align: center;
+}
+.stepline{
+    float: left;
+    width: 152px;
+    height: 50px;
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: -306px -145px;
+}
+.step1_img{
+    width: 100px;
+    height: 50px;
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: -364px -290px;
+}
+.step2_img{
+    width: 100px;
+    height: 50px;
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: -468px -290px;
+}
+.step3_img{
+    width: 100px;
+    height: 50px;
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: -462px -199px;
+}
+.stepline_1{
+    width: 152px;
+    height: 50px;
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: 0 -290px;
+}
+.tit{
+    line-height: 59px;
+    height: 59px;
+    border-bottom: 1px solid #b3b3b3;
+}
+.tit .temai{
+    display: inline-block;
+    font-size:16px;
+    font-weight: 900;
+    text-align: center;
+    color:#f10180; 
+    width: 84px;
+    height: 59px;
+    box-sizing: border-box;
+    border-bottom:3px solid #f10180;
+}
+.tit .yaopin{
+    font-weight: 900;
+    text-align: center;
+    display: inline-block;
+    font-size:16px; 
+    color:#000;
+}
+.tit_line{
+    margin:0 10px;
+    width: 1px;
+    height: 20px;
+    vertical-align: middle;
+}
+.peisong{
+    height: 85px;
+    line-height: 85px;
+    font-size: 18px;
+    color: #333;
+}
+.peisong_line{
+    width: 1px;
+    height: 18px;
+    margin:0 16px;
+    vertical-align: middle;
+}
+.vipicon-question{
+    color: #2d89f8;
+}
+.cart{
+    
+}
+.cart_title{
+    height: 40px;
+    background: #f9f9f9;
+    border:1px solid #e0e0e0;
+    border-left: 3px solid #f10180;
 }
