@@ -127,17 +127,16 @@ var register = (function(){
             }
 /* 提交注册--开始 */
             this.$submit.onclick = function(){
-                console.log(1);
                 var $pAll = this.parentNode.querySelectorAll('.text');
                 for(let i = 0; i < $pAll.length; i++){
                     var bool = $pAll[i].parentNode.querySelector('input').className.indexOf('inputsuccess');
                     if(bool == -1){
                         $pAll[i].innerHTML = $pAll[i].parentNode.querySelector('input').getAttribute('error');                
+                        return false;
                     }
-                    return;
                 }
-                console.log(2);
                 alert('注册成功');
+                sendAjax()
             }
 /* 提交注册--结束 */
         },
