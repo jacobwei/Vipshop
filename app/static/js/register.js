@@ -151,8 +151,7 @@ var register = (function () {
                         return false;
                     }
                 }
-                alert('注册成功');
-                sendAjax()
+                // alert('注册成功');
             }
             /* 提交注册--结束 */
         },

@@ -88,8 +88,8 @@ var login = (function () {
                         return false;
                     }
                 }
-                alert('登录成功');
-                sendAjax()
+                // alert('登录成功');
+                // sendAjax()
             }
 /* 提交登录--结束 */
 

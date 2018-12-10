@@ -677,36 +677,3 @@ nav .nav-cnt li.more .hid-more p a{
 nav .nav-cnt li.more .hid-more p a:hover{
     color: #f00581;
 }
-/* nav .nav-cnt li.more .hid-more a{
-    position: relative;
-    float: left;
-    margin: 0 16px 16px 0;
-    width: 170px;
-    height: 96px;
-    border-radius: 4px;
-    overflow: hidden;
-} */
-/* nav .nav-cnt li.more .hid-more a .meng{
-    position: absolute;
-    width: 170px;
-    height: 96px;
-    left: 0;
-    top: 40%;
-    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.9) 100%);
-    transition: 0.3s;
-} */
-/* nav .nav-cnt li.more .hid-more a .meng p{
-    position: absolute;
-    top: 26%;
-    width: 100%;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    transition: 0.3s;
-}
-nav .nav-cnt li.more .hid-more a:hover .meng{
-    top: 0;
-}
-nav .nav-cnt li.more .hid-more a:hover .meng p{
-    top: 45%;
-} */
