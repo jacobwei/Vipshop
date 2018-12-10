@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>唯品会网站注册</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <div id="header_box">
+        <div class="header">
+            <a href="index.html" class="logo">唯品会</a>
+            <div class="promise"></div>
+        </div>
+    </div>
+    <div id="main_box">
+        <div class="main">
+                <!-- ../../../server/php/register.php -->
+            <form class="form" action="../../../server/php/register.php" method="post">
+                <div class="form_title">
+                    <b>会员注册</b>
+                    <i>已注册可<a href="login.html">直接登录</a></i>
+                </div>
+                <div class="form_body">
+                    <div>
+                        <i class="shop vipicon-shouji"></i>
+                        <input type="text" name="phone" id="phone" placeholder="请输入手机号码" error="请输入正确的手机号码" empty="手机号不能为空">
+                        <p class="text"></p>
+                    </div>
+                    <div>
+                        <i class="shop vipicon-duanxin"></i>
+                        <input type="text" name="code" id="code" placeholder="请输入验证码" error="验证码错误" empty="请输入6位数字手机验证码">
+                        <!-- <input type="button" value="获取验证码" id="getcode"> -->
+                        <button id="getcode" disabled="disabled" class="notgetcode">获取验证码</button>
+                        <p class="text"></p>
+                    </div>
+                    <div>
+                        <i class="shop vipicon-suo"></i>
+                        <input type="password" name="password" id="password" placeholder="密码由6-20位字母，数字和符号组合" error="请输入6-20位密码" empty="密码不能为空">
+                        <p class="text"></p>
+                    </div>
+                    <div>
+                        <i class="shop vipicon-suo"></i>
+                        <input type="password" name="repassword" id="repassword" placeholder="请再次输入上面的密码" error="两次输入的密码不一致，请重试" empty="请输入确认密码">
+                        <p class="text"></p>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="checkbox" error="接受服务条款才能注册">
+                        <label for="checkbox">我已阅读并接受以下条款：<a href="">《唯品会服务条款》</a><a href="">《隐私条款》</a><a href="">《唯品支付用户服务协议》</a><a href="">《唯品信用服务协议》</a></label>
+                        <p class="text"></p>
+                    </div>
+                    <input type="submit" value="立即注册" id="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="footer_box">
+        <p class="footer">Copyright 2008-2018 vip.com，All Rights Reserved ICP证：粤 B2-20080329</p>
+    </div>
+    
+    <script src="../js/register.js"></script>
+    <script src="../js/ajax2.0.js"></script>
+
+</body>
+
+</html>
