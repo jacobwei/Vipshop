@@ -1,12 +1,12 @@
 <?php   
         //获取用户名、密码
-        $user = $_GET["username"];
-        $psw = $_GET["userpwd"];  
+        $user = $_POST["username"];
+        $psw = $_POST["userpwd"];  
         //如果用户名或密码为空
         if($user == "" || $psw == "")  
         {  
             //弹窗提醒，并返回登录页
-            echo "<script>alert('请输入用户名或密码！');</script>";
+            echo "<script>alert('请输入用户名或密码！');history.go(-1); </script>";
             // history.go(-1); 
             //
         }  

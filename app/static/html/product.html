@@ -1,12 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>商品详情</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
 </head>
+
 <body>
-    
+    <!-- 顶部菜单栏 -->
+    <header id="header_wrapper">
+        <div class="hd-cnt">
+            <div class="local-address">
+                <div class="word">
+                    <span class="top-city"><b id="word-city">深圳市</b><i class="iconfont icon-up"></i></span>
+                    <div class="hid-address">
+                        <b class="close-btn">+</b>
+                        <p>请选择你所在的收货地区</p>
+                        <ul class="pro-city clearfix">
+                            <li class="select">省份</li>
+                            <li>城市</li>
+                        </ul>
+                        <div class="add-hid">
+                            <ul class="pro list-hid clearfix" id="pro">
+                                <!-- <li><a href="">北京市</a></li>-->
+                            </ul>
+                            <ul class="city list-hid clearfix" id="city">
+                                <!-- <li><a href="">苏州市</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="big-bg">
+                        <div class="change-suc">
+                            <div class="cnt">
+                                <p><i></i>已成功切换至<span id="hid-wd"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav-list">
+                <li class="la">
+                    <a href="">请登录</a>
+                    <div class="top-hid deng">
+                        <div class="hd-login clearfix">
+                            <i></i>
+                            <a href="">你好！[请登录]</a>
+                        </div>
+                        <p class="hd-list clearfix">
+                            <a href="">我的收藏</a>
+                            <a href="">我的订单</a>
+                            <a href="">零钱</a>
+                            <a href="">我的优惠券</a>
+                            <a href="">我的唯品币</a>
+                            <a href="">唯品金融</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <a href="">注册</a>
+                </li>
+                <li class="dao">
+                    <span><i class="git"></i>签到有礼</span>
+                    <div class="qian">
+                        <i class="jiao"></i>
+                        <div class="line"></div>
+                        <div class="day">
+                            <div>
+                                <p>1天</p>
+                            </div>
+                            <div>
+                                <p>2天</p>
+                            </div>
+                            <div>
+                                <p>3天</p>
+                            </div>
+                            <div>
+                                <p>4天</p>
+                            </div>
+                            <div>
+                                <p>5天</p>
+                            </div>
+                            <div>
+                                <p>6天</p>
+                            </div>
+                            <div>
+                                <p>7天</p>
+                            </div>
+                        </div>
+                        <div class="qian-word clearfix">
+                            <a href="" class="qian-dec">每天签到送惊喜，连续签到更享心动奖励</a>
+                            <a href="" class="qian-btn">签到</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">我的订单</a>
+                </li>
+                <li class="la">
+                    <a href="">我的特卖<i class="iconfont icon-up"></i></a>
+                    <div class="top-hid temai">
+                        <p><a href="">品牌收藏(0)</a></p>
+                        <p><a href="">商品收藏(0)</a></p>
+                        <p><a href="">我的足迹(0)</a></p>
+                    </div>
+                </li>
+                <li class="la">
+                    <a href="">会员俱乐部<i class="iconfont icon-up"></i></a>
+                    <div class="top-hid vip">
+                        <p><a href="">俱乐部首页</a></p>
+                        <p><a href="">唯品币兑换</a></p>
+                        <p><a href="">免费抽大奖</a></p>
+                    </div>
+                </li>
+                <li class="la">
+                    <a href="">客户服务<i class="iconfont icon-up"></i></a>
+                    <div class="top-hid kehu">
+                        <p><a href="">联系客服</a></p>
+                        <p><a href="">帮助中心</a></p>
+                        <p><a href="">服务中心</a></p>
+                        <p><a href="">知识产权投诉</a></p>
+                    </div>
+                </li>
+                <li class="la">
+                    <a href=""><i class="iconfont icon-shouji-copy"></i>手机版</a>
+                    <div class="top-hid sj">
+                        <a href="">
+                            <img src="../images/appQRcode.jpg" alt="">
+                        </a>
+                        <p><a href="">随时逛 及时抢</a></p>
+                    </div>
+                </li>
+                <li class="la">
+                    <a href="">更多<i class="iconfont icon-up"></i></a>
+                    <div class="top-hid more">
+                        <h5>合作专区</h5>
+                        <p>
+                            <a href="">联名卡申请</a>
+                            <a href="">唯品卡</a>
+                            <a href="">支付专区</a>
+                        </p>
+                        <h5 class="dot">关于我们</h5>
+                        <p>
+                            <a href="">Sell on vip</a>
+                            <a href="">品牌招商</a>
+                            <a href="">官方博客</a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- logo和搜索框 -->
+    <div class="logo-search">
+        <div class="ls-cnt">
+            <div class="left-logo clearfix">
+                <div class="logo">
+                    <a href="">
+                        <img src="../images/logo.gif" alt="唯品会logo">
+                    </a>
+                </div>
+                <div class="service">
+                    <a href="">
+                        <img src="../images/service.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="right-search">
+                <form action="">
+                    <input type="text" name="text" placeholder="女款羽绒服">
+                    <a href="">
+                        <i class="iconfont icon-fangdajing"></i>
+                    </a>
+                </form>
+                <div class="shop-bag">
+                    <a href=""><i class="iconfont icon-gouwudai"></i>购物袋<b>0</b></a>
+                    <div class="hid-bag">
+                        <p>好像还未登录！<a href="">马上登录</a>查看购物袋吧！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <nav>
+        <ul class="nav-cnt">
+            <li>
+                <a href="" class="current"><i class="iconfont icon-icon-"></i>商品分类</a>
+            </li>
+            <li>
+                <span class="hot"><img src="../images/hot.gif">&nbsp;&nbsp;特卖大会来啦</span>
+            </li>
+            <li>
+                <a href="">最后疯抢</a>
+            </li>
+            <li>
+                <a href="">女装</a>
+            </li>
+            <li>
+                <a href="">母婴</a>
+            </li>
+            <li>
+                <a href="">家电</a>
+            </li>
+            <li>
+                <a href="">国际</a>
+            </li>
+            <li>
+                <a href="">美妆</a>
+            </li>
+            <li>
+                <a href="">鞋包</a>
+            </li>
+            <li>
+                <a href="">男装</a>
+            </li>
+            <li>
+                <a href="">运动</a>
+            </li>
+            <li>
+                <a href="">预告</a>
+            </li>
+            <li class="more">
+                <a href="">更多<i class="iconfont icon-up"></i></a>
+                <div class="hid-more">
+                    <p>
+                        <a href="">家居</a>
+                    </p>
+                    <p>
+                        <a href="">生活</a>
+                    </p>
+                    <p>
+                        <a href="">配饰</a>
+                    </p>
+                    <p>
+                        <a href="">金融</a>
+                    </p>
+                    <p>
+                        <a href="">扶贫</a>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </nav>
 </body>
+
 </html>
