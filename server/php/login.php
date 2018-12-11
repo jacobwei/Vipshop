@@ -1,14 +1,13 @@
 <?php   
         //获取用户名、密码
         $user = $_POST["username"];
-        $psw = $_POST["userpwd"];  
+        $psw = $_POST["userpassword"];  
         //如果用户名或密码为空
         if($user == "" || $psw == "")  
         {  
             //弹窗提醒，并返回登录页
-            echo "<script>alert('请输入用户名或密码！');history.go(-1); </script>";
+            echo "<script>alert('请输入用户名或密码！');history.go(-1);</script>";
             // history.go(-1); 
-            //
         }  
         else  
         {  
@@ -18,11 +17,16 @@
             $coon->query("SET CHARACTER SET 'utf8'");//读库   
             $coon->query("SET NAMES 'utf8'");//写库 
             $result = $coon -> query($sql); //执行查询语句
-            var_dump($result);
+            // var_dump($result);
             $num = mysqli_num_rows($result); //统计影响的行数
             if($num)  
             {  
-                echo "<script>alert('登录成功！');</script>";  
+                echo "<script>alert('登录成功！');</script>"; 
+                //验证成功跳转到首页
+                echo "<script>window.location.href = '../../app/static/html/product.html'</script>";
+                // $loguser = $_POST["loguser"];
+                // var_dump($loguser);
+                // echo "<script>$loguser.innerHTML = '$user';</script>";
             }  
             else  
             {  
