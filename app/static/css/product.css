@@ -86,7 +86,7 @@
 .pro_buyinfo{
     width: 550px;
     height: 607px;
-    background-color: #aaa;
+    /* background-color: #aaa; */
     float: right;
 }
 .pib-title-class{
@@ -109,3 +109,24 @@
     margin-bottom: 8px;
     font-weight: 700;
 }
+.detail_price{
+    background: url(../images/detail/detail_price_bg.png) no-repeat #faf5f8;
+}
+.pbox_price_show{
+    height: 50px;
+    line-height: 50px;
+    color: #666;
+    font-size: 16px;
+}
+.weipinjia{
+    margin-left: 20px;
+}
+.dicount_box{
+    margin-left: 20px;
+    color: #999;
+    font-size: 16px;
+}
+.pbox_off{
+    margin-left: 10px;
+}
+
