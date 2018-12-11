@@ -5,12 +5,12 @@ var glass = (function () {
     var $bigMoreAll = document.querySelectorAll('.bigMore');
     var $screen = document.querySelectorAll('.screen');
     var $pic = document.querySelectorAll('.bigMoreImg');
-    console.log($bigBox);
-    console.log($bigItemAll);
-    console.log($smallItemAll);
-    console.log($bigMoreAll);
-    console.log($screen);
-    console.log($pic);
+    // console.log($bigBox);
+    // console.log($bigItemAll);
+    // console.log($smallItemAll);
+    // console.log($bigMoreAll);
+    // console.log($screen);
+    // console.log($pic);
     return {
         init() {
             this.event();
