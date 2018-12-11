@@ -342,6 +342,7 @@
 .number #add{
     width: 22px;
     height: 22px;
+    background:#fff;
     border: 0;
 }
 .number #num{
@@ -354,6 +355,7 @@
 .number #sub{
     width: 22px;
     height: 22px;
+    background:#fff;
     border: 0;
 }
 .goods td:nth-of-type(4) {

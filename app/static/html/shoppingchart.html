@@ -102,10 +102,29 @@
                             </td>
                             <td>
                                 <div class="number">
-                                    <input type="button" name="add" id="add" value="-">
-                                    <input type="text" name="num" id="num" value="1" data-min="1">
-                                    <input type="button" name="sub" id="sub" value="+">
+                                    <input type="button" name="sub" id="sub" value="-">
+                                    <input type="text" name="num" id="num" >
+                                    <input type="button" name="add" id="add" value="+">
                                 </div>
+                                <script>
+                                    var $add = document.getElementById('add');
+                                    var $num = document.getElementById('num');
+                                    var $sub = document.getElementById('sub');
+                                    var count = $num.value;
+                                    $add.onclick = function(){
+                                        count = $num.value;
+                                        count++;
+                                        $num.value = count;
+                                    }
+                                    $sub.onclick = function(){
+                                        count = $num.value;
+                                        count--;
+                                        if(count <= 1){
+                                            count = 1;
+                                        }
+                                        $num.value = count;
+                                    }
+                                </script>
                             </td>
                             <td>
         <!-- 小计 -->            <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;">￥699</p>            
@@ -181,5 +200,6 @@
         </div>
     </footer>
 <!-- 尾部结束 -->
+<!-- <script src="../js/shoppingchart.js"></script> -->
 </body>
 </html>
