@@ -619,8 +619,11 @@ nav .nav-cnt li>a.current{
     cursor: default;
     /* font-weight: 700; */
     position: relative;
+    width: 115px;
+    height: 45px;
     background-color: #f10180;
     padding: 0 17.5px;
+    box-sizing: border-box;
     color: #fff;
 }
 nav .nav-cnt li>a:not(.current):hover{
@@ -685,32 +688,65 @@ nav .nav_erji li{
     line-height: 45px;
     font-size: 14px;
     color: #fff;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
-nav .nav_erji li:hover{
+nav .nav_erji>li:hover{
     color: #f00581;
     background-color: #fff;
+}
+nav .nav_erji>li:hover>.goodslist{
+    display: block;
 }
 nav .nav_cnt .li_current{
     position: relative;
 }
-.nav_pop{
-    /* display: none; */
+.nav_erji li .goodslist{
+    display: none;
     position: absolute;
-    left:408px;
-    top: 195px;
-    width: 1014px;
+    left:115px;
+    top: 0px;
+    width: 885px;
     height: 495px;
-    background-color: #666;
+    background-color: #fff;
 }
-.nav_pop .pop_box{
+.nav_erji li:hover dl{
+    color:#000;
+}
+.goodslist dl{
+    float: left;
+    width: 567px;
+    overflow: hidden;
+    padding-left: 36px;
+    font-size: 12px;
+    border-bottom:1px solid #eee;
+}
+.goodslist dl dt{
+    float: left;
+    width: 90px;
+    color: #000;}
+.goodslist dl dd{
+    width:460px;
+    display: inline-block;
+    overflow: hidden;
+    color: #666;
+    padding-top: 12px;
+    box-sizing: border-box;
+}
+.goodslist dl dd a{
+    float: left;
+    color: #666;
+    padding:0 7px;
+    line-height: 22px;
+}
+/* .nav_pop .pop_box{
     width: 779px;
     height: 495px;
-}
-.nav_pop .pop_bg{
+} */
+.pop_bg{
     width: 235px;
     height: 495px;
     float: right;
+    background: url(../images/pop_bg.png);
 }
 /* 右侧菜单栏样式 */
 aside{
