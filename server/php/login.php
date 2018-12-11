@@ -3,13 +3,13 @@
         $user = $_POST["username"];
         $psw = $_POST["userpassword"];  
         //如果用户名或密码为空
-        if($user == "" || $psw == "")  
+        /* if($user == "" || $psw == "")  
         {  
             //弹窗提醒，并返回登录页
             echo "<script>alert('请输入用户名或密码！');history.go(-1);</script>";
             // history.go(-1); 
         }  
-        else  
+        else  */ 
         {  
 
             $coon = new mysqli('localhost', 'root', '', 'vipshop_userinfo', 3306);

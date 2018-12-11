@@ -137,12 +137,6 @@ var register = (function () {
             }
             /* 提交注册--开始 */
             this.$submit.onclick = function () {
-                // if (submit_flag) {
-                //     this.removeAttribute('disabled');
-                // } else {
-                // e = e || window.event;
-                // e.returnValue = false;
-                console.log(this);
                 var $pAll = this.parentNode.querySelectorAll('.text');
                 for (let i = 0; i < $pAll.length; i++) {
                     var bool = $pAll[i].parentNode.querySelector('input').className.indexOf('inputsuccess');

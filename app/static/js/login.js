@@ -27,7 +27,7 @@ var login = (function () {
                 _this.$title_account.style.color = '#666666';
             }
 /* 内容为空提示--开始 */
-            for(let i = 0;i < this.$inputAll.length - 2;i++){
+            for(let i = 0;i < this.$inputAll.length - 1;i++){
                 this.$inputAll[i].onblur = function(){
                     var $p = this.parentNode.querySelector('.text');
                     if(this.value == ''){
@@ -81,14 +81,14 @@ var login = (function () {
 /* 提交登录--开始 */
             this.$submit.onclick = function(){
                 var $pAll = this.parentNode.querySelectorAll('.text');
-                for(let i = 0; i < $pAll.length - 2; i++){
+                for(let i = 0; i < $pAll.length -1; i++){
                     var bool = $pAll[i].parentNode.querySelector('input').className.indexOf('inputsuccess');
                     if(bool == -1){
-                        $pAll[i].innerHTML = $pAll[i].parentNode.querySelector('input').getAttribute('error');                
+                        $pAll[i].innerHTML = $pAll[i].parentNode.querySelector('input').getAttribute('enpty');                
                         return false;
                     }
                 }
-                // alert('登录成功');
+                alert('登录成功');
                 // sendAjax()
             }
 /* 提交登录--结束 */

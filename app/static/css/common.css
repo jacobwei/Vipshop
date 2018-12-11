@@ -941,6 +941,7 @@ footer .ft-cnt{
     margin: 0 auto;
 }
 footer .ft-cnt .ft-vip{
+    width: 960px;
     height: 105px;
     display: flex;
 }
