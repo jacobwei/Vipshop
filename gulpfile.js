@@ -1,9 +1,3 @@
-// var gulp = require('gulp');
-
-// gulp.task('default', function() {
-//   // 将你的默认的任务代码放在这
-//   console.log(1+5);
-// });
 var gulp = require('gulp'); //加载gulp
 var uglify = require('gulp-uglify'); //加载js压缩
 var babel = require('gulp-babel'); //转义,ES6转成ES5
@@ -24,20 +18,12 @@ var minifyCss = require('gulp-clean-css'), //压缩css
 //压缩JS
 gulp.task('minjs', function () {
     gulp.src('app/static/js/*.js')
-        .pipe(babel())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
 })
-// gulp.task('minijs', function () {
-//     gulp.src('app/static/js/*.js')
-//         .pipe(babel())
-//         .pipe(uglify())
-//         .pipe(rev())
-//         .pipe(gulp.dest('dist/js'))
-//         .pipe(rev.manifest())
-//         .pipe(gulp.dest('rev'))
-
-// })
 
 //压缩图片
 gulp.task('minimage', function () {
@@ -131,7 +117,7 @@ gulp.task('default',['clean','all','watch','connect'])
 
 //把sass转为css文件
 gulp.task('sass', function () {
-    return gulp.src('app/static/css/*.sass')
+    return gulp.src('app/static/css/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist/css'));
 })
