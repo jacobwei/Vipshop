@@ -7,6 +7,7 @@
     <title>唯品会-我的购物袋</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/shoppingchart.css">
 </head>
 <body>
@@ -78,15 +79,42 @@
 <!-- 购物车商品列表开始 -->
              <div class="cart">
                  <ul class="cart_thead">
-                    <li class="product">精选特卖</li>
+                    <li class="product" style="text-align:left;">精选特卖</li>
                     <li class="price" style="width:300px;">单价</li>
                     <li class="quantum" style="width:100px;">数量</li>
                     <li class="subtotal" style="width:145px;">小计</li>
                     <li class="action" style="width:100px;">操作</li>
                  </ul>
-        <!-- 商品数据写在这 -->                 
-                 <div class="cart_tbody">
-                     shuju
+     <!-- 商品数据渲染在这 每一个tr -->                 
+                 <div class="cart_body">
+                    <table class="commodity">
+                        <tr class="goods">
+                            <td class="product_item">
+                                    <p class="goods_img"></p>
+        <!-- 商品名写在a标签里 -->   <p style="display:inline-block; height:34px;"><i style="color:#f10180">自营</i><div class="split-line goods_line"></div>
+                                         <a>女连帽可脱卸真毛领一手长收腰羽绒服</a>
+                                    </p>
+                                    <p style="margin-top:10px;width:50px;">尺码：S</p>
+                            </td>
+                            <td>
+        <!-- 现价 -->            <p style="font-weight:900;">￥699</p>
+        <!-- 原价 -->            <p style="text-decoration-line: line-through; color:#999;">￥1699</p>
+                            </td>
+                            <td>
+                                <div class="number">
+                                    <input type="button" name="add" id="add" value="-">
+                                    <input type="text" name="num" id="num" value="1" data-min="1">
+                                    <input type="button" name="sub" id="sub" value="+">
+                                </div>
+                            </td>
+                            <td>
+        <!-- 小计 -->            <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;">￥699</p>            
+                            </td>
+                            <td>
+        <!-- 删除按钮 -->         <a id="del" style="cursor:pointer;">删除</a>                  
+                            </td>
+                        </tr>
+                    </table>
                  </div>
                  <div class="yunfei">
                      <span>运费</span>
@@ -106,16 +134,52 @@
              </div>
 <!-- 购物车商品列表结束 -->
 <!-- 三保证开始 -->
-             <div class="proimg">
-                 <p></p>
-                 <p></p>
-                 <p></p>
-             </div>
+        <div class="proimg">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
 <!-- 三保证结束 -->
+    </div>
+</div>
 <!-- 尾部开始 -->
-
+<footer>
+        <div class="ft-cnt">        
+            <div class="ft-info">
+                <p class="ft-link">
+                    <a href="" title="关于我们">关于我们</a> |
+                    <a href="" title="About us">About us</a> |
+                    <a href="" title="Investor Relations">Investor Relations</a>|
+                    <a href="" title="媒体报道">媒体报道</a> |
+                    <a href="" title="品牌招商">品牌招商</a> |
+                    <a href="" title="隐私条款">隐私条款</a> |
+                    <a href="" title="唯品诚聘">唯品诚聘</a> |
+                    <a href="" title="唯品卡">唯品卡</a> |
+                    <a href="" title="联系我们">联系我们</a>
+                </p>
+                <p class="ft-text">
+                    <span>Copyright © 2008-2018 vip.com，All Rights Reserved 使用本网站即表示接受</span>
+                    <a href="">唯品会用户协议</a><span>。版权所有 </span><a href="">广州唯品会电子商务有限公司</a>
+                </p>
+                <p class="ft-text">
+                    <a href="" class="gong">粤公网安备 44010302111111号</a><a href="">粤ICP备08114786号</a><a href="">增值业务经营许可证：粤B2-20170777
+                    </a><a href="">网络文化经营许可证：粤网文〔2015〕1528-229</a>
+                </p>
+                <p class="ft-text">
+                    <a href="">自营主体经营证照</a><a href="">风险监测信息</a><a href="">互联网药品交易服务资格证（粤C20140002）</a>
+                </p>
+                <p class="ft-img">
+                    <a href="" class="ft-img1" title="银联特约商户"></a>
+                    <a href="" class="ft-img2" title="消费维权服务站"></a>
+                    <a href="" class="ft-img3" title="红盾电子链接标识"></a>
+                    <a href="" class="ft-img4" title="网络警察报警平台"></a>
+                    <a href="" class="ft-img5" title="公安局网络警察支队"></a>
+                    <a href="" class="ft-img6" title="诚信网站"></a>
+                    <a href="" class="ft-img7" title="可信网站"></a>
+                </p>
+            </div>
+        </div>
+    </footer>
 <!-- 尾部结束 -->
-     </div>
- </div>
 </body>
 </html>
