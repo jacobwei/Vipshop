@@ -1,5 +1,7 @@
 var shopCar = (function () {
     var $table = document.querySelector('.commodity');
+    var $count = document.querySelector('#count');
+    var count = $count.value;
     return {
         init() {
             this.event();
@@ -7,14 +9,31 @@ var shopCar = (function () {
         },
         event() {
             var _this = this;
+            $table.onclick = function(e){
+                e = e || window.event;
+                var target = e.target || e.srcElement;
+                var deltr = target.parentNode.parentNode;
+                if(target.id == 'del'){
+                    deltr.remove();
+                }else if(target.id == "add"){
+                    count = target.previousElementSibling.value;
+                    count++;                                            
+                    target.previousElementSibling.value = count;                                           
+                }else if(target.id == "sub"){
+                    count = target.nextElementSibling.value;
+                    count--;
+                    if(count <= 1){
+                        count = 1;
+                    }
+                    target.nextElementSibling.value = count;
+                }
+            }
         },
         getData() {
             var shopList = localStorage.shopList || '[]';
             shopList = JSON.parse(shopList);
-
             console.log(shopList);
-            this.insertData(shopList)
-
+            this.insertData(shopList);
         },
         insertData(data) {
             data.forEach((item, index) => {
@@ -30,42 +49,22 @@ var shopCar = (function () {
 <!--尺码 -->                <p style="margin-top:10px;width:50px;">尺码：${data[index].size}</p>
                 </td>
         <td>
-<!-- 现价 -->            <p style="font-weight:900;">${data[index].price_now}</p>
-<!-- 原价 -->            <p style="text-decoration-line: line-through; color:#999;">${data[index].price_before}</p>
+<!-- 现价 -->            <p style="font-weight:900;">￥${data[index].price_now}</p>
+<!-- 原价 -->            <p style="text-decoration-line: line-through; color:#999;">￥${data[index].price_before}</p>
         </td>
         <td>
             <div class="number">
                 <input type="button" name="sub" id="sub" value="-">
-                <input type="text" name="num" id="num" >
+                <input type="text" name="count" id="count" value="${data[index].count}" >
                 <input type="button" name="add" id="add" value="+">
             </div>
-            <script>
-                var $add = document.getElementById('add');
-                var $num = document.getElementById('num');
-                var $sub = document.getElementById('sub');
-                var count = $num.value;
-                $add.onclick = function(){
-                    count = $num.value;
-                    count++;
-                    $num.value = count;
-                }
-                $sub.onclick = function(){
-                    count = $num.value;
-                    count--;
-                    if(count <= 1){
-                        count = 1;
-                    }
-                    $num.value = count;
-                }
-            </script>
         </td>
         <td>
-<!-- 小计 -->            <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;">￥699</p>            
+<!-- 小计 -->    <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;">￥${data[index].price_now * data[index].count}</p>            
         </td>
         <td>
-<!-- 删除按钮 -->         <a id="del" style="cursor:pointer;">删除</a>                  
+<!-- 删除按钮 --> <a id="del" style="cursor:pointer;">删除</a>                  
         </td>
-
                 `
                 $table.appendChild($tr);
             })

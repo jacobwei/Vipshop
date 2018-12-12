@@ -103,28 +103,30 @@
                             <td>
                                 <div class="number">
                                     <input type="button" name="sub" id="sub" value="-">
-                                    <input type="text" name="num" id="num" >
+                                    <input type="text" name="count" id="count" value="1" >
                                     <input type="button" name="add" id="add" value="+">
                                 </div>
-                                <script>
-                                    var $add = document.getElementById('add');
-                                    var $num = document.getElementById('num');
-                                    var $sub = document.getElementById('sub');
-                                    var count = $num.value;
-                                    $add.onclick = function(){
-                                        count = $num.value;
-                                        count++;
-                                        $num.value = count;
-                                    }
-                                    $sub.onclick = function(){
-                                        count = $num.value;
-                                        count--;
-                                        if(count <= 1){
-                                            count = 1;
+                                <!-- <script>
+                                    var $table = document.querySelector('.commodity');
+                                    var count = $count.value;
+                                    $table.onclick = function(e){
+                                        e = e || window.event;
+                                        var target = e.target || e.srcElement;
+                                        if(target.id == "add"){
+                                            count = target.previousElementSibling.value;
+                                            count++;                                            
+                                            target.previousElementSibling.value = count;                                           
+                                        }else if(target.id == "sub"){
+                                            count = target.nextElementSibling.value;
+                                            count--;
+                                            if(count <= 1){
+                                                count = 1;
+                                            }
+                                            target.nextElementSibling.value = count;
                                         }
-                                        $num.value = count;
                                     }
-                                </script>
+                                    
+                                </script> -->
                             </td>
                             <td>
         <!-- 小计 -->            <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;">￥699</p>            

@@ -1,45 +1,51 @@
 {   "code":"0",
     "data":[
-    {
+    { 
+        "id":1,
         "product":"女连帽可脱卸真毛领一手长收腰羽绒服",
         "size":"S",
-        "price_now":"￥699",
-        "price_before":"￥1699",
+        "price_now":"699",
+        "price_before":"1699",
         "count":1
     },
     {
+        "id":2,
         "product":"2018冬新品卫衣ins简约纯色木耳边立领上衣女",
         "size":"S",
-        "price_now":"￥159",
-        "price_before":"￥548",
+        "price_now":"159",
+        "price_before":"548",
         "count":1
     },
     {
+        "id":3,
         "product":"2018冬装新款 女士时尚不规则下摆宽松连帽短款外套棉衣",
         "size":"S",
-        "price_now":"￥645",
-        "price_before":"￥768",
+        "price_now":"645",
+        "price_before":"768",
         "count":1
     },
     {
+        "id":4,
         "product":"2018冬季新款女装加厚保暖连帽毛绒中长款面包服女式棉衣",
         "size":"S",
-        "price_now":"￥234",
-        "price_before":"￥564",
+        "price_now":"234",
+        "price_before":"564",
         "count":1
     },
     {
+        "id":5,
         "product":"女一手长立领下摆螺纹拼接棉衣",
         "size":"S",
-        "price_now":"￥224",
-        "price_before":"￥343",
+        "price_now":"224",
+        "price_before":"343",
         "count":1
     },
     {
+        "id":6,
         "product":"秋冬新品复古港风加绒格子面料女式",
         "size":"S",
-        "price_now":"￥89",
-        "price_before":"￥99",
+        "price_now":"89",
+        "price_before":"99",
         "count":1
     }
 ]
