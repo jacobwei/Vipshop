@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+
+        </li>
+    </ul>
+    <script src="../js/ajax2.0.js"></script>
+    <script>
+        var shop = (function() {
+            var $ul = document.querySelector('ul');
+            return {
+                init() {
+                    this.event();
+                    this.getData();
+                },
+                event() {
+                    var _this = this;
+                    $ul.onclick = function(e) {
+                        e = e || window.event;
+                        var target = e.target || e.srcElement;
+                        if(target.nodeName === 'BUTTON') {
+                            // 获取商品数量
+                            // 获取当前li
+                            var father = target.parentNode;
+                            var count = father.querySelector('.count').value;
+                            // 从商品数据中,获取对应这一个商品的数据
+                            _this.data[father.index].count = count;
+                            _this.setItem(_this.data[father.index]);
+                        }
+
+                    }
+                },
+                getData() {
+                    console.log(1);
+                    sendAjax('../../../server/json/goodsdata.json').then(res => {
+                        res = JSON.parse(res);
+                        console.log(1);
+                        if(res.code == 0) {
+                            // 把商品数据存到shop对象里
+                            this.data = res.data;
+                            this.insertData(res.data);
+                        } else {
+                            alert("获取信息失败, 请查询网络状况");
+                        }
+                    });
+                },
+                insertData(data) {
+                    console.log(data);
+                    // 循环数组
+                    for(let i= 0; i < data.length; i++ ) {
+                        var $li = document.createElement('li');
+                        $li.index = i;
+                        $li.innerHTML = `
+                            商品名称:<span class='product'>${data[i].product}</span></br>
+                            商品尺寸<span class='size'>${data[i].size}</span></br>
+                            商品现价<span class='price-now'>${data[i].price_now}</span></br>
+                            商品原价<span class='price--before'>${data[i].price_before}</span></br>
+                            购买数量<input class="count" placeholder="请输入数量" /></br>
+                            <button>加入购物车</button>
+                        `
+                        $ul.appendChild($li);
+                    }
+
+                },
+                // 把商品数据存储到本地
+                setItem(data) {
+                    // 现获取原有数据
+                    var shopList = localStorage.getItem('shopList') || '[]';
+                    shopList = JSON.parse(shopList);
+                    // 在把新数据push到原有数据
+                    shopList.push(data);
+                    // 在把全部数据存到本地
+                    localStorage.shopList = JSON.stringify(shopList);
+                    // console.log(shopList);
+
+                }
+            }
+        }())
+        
+        shop.init();
+    </script>
+</body>
+</html>
