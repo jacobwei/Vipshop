@@ -1,26 +1,30 @@
 var shopCar = (function () {
+    var countAll =0;
     return {
         init() {
             this.$table = document.querySelector('.commodity');
+            this.$countprice = document.querySelector('.count');
             this.getData();
             this.$count = document.querySelector('#count');
-            this.
-            this.count = this.$count.value ;
+            this.count = this.$count.value;
+            this.allCountItem = document.querySelectorAll('.countitem');
+            console.log(this.allCountItem);
             this.event();
         },
         event() {
             var _this = this;
             this.$count.oninput = function (e) {
+                console.log(1);
                 e = e || window.event;
                 var target =  e.target || e.srcElement;
                 var index = target.parentNode.parentNode.parentNode.index;                  
-                console.log(index);
                 if(target.id === 'count') {
                     var data = _this.data[index];
                     data.count = Number(target.value);
                     localStorage.shopList = JSON.stringify(_this.data);
                     target.parentNode.parentNode.parentNode.remove();
                     _this.insertData(_this.data);
+                    // _this.showcount();
                 } 
             }
             this.$table.onclick = function(e){
@@ -41,7 +45,8 @@ var shopCar = (function () {
                     data.count = _this.count;
                     localStorage.shopList = JSON.stringify(_this.data);
                     target.parentNode.parentNode.parentNode.remove();
-                    _this.insertData(_this.data);                                           
+                    _this.insertData(_this.data);
+                    // countAll++;                                           
                 }else if(target.id == "sub"){
                     _this.count = target.nextElementSibling.value;
                     _this.count--;
@@ -54,8 +59,8 @@ var shopCar = (function () {
                     data.count = _this.count;
                     localStorage.shopList = JSON.stringify(_this.data);
                     target.parentNode.parentNode.parentNode.remove();
-                    _this.insertData(_this.data);                                           
-
+                    _this.insertData(_this.data);  
+                    // countAll--;                                                                                    
                 }
             }
         },
@@ -87,7 +92,7 @@ var shopCar = (function () {
         <td>
             <div class="number">
                 <input type="button" name="sub" id="sub" value="-">
-                <input type="text" name="count" id="count" value="${data[index].count}" >
+                <input type="text" name="count" id="count" class="countitem" value="${data[index].count}" >
                 <input type="button" name="add" id="add" value="+">
             </div>
         </td>
@@ -99,7 +104,25 @@ var shopCar = (function () {
         </td>
                 `;
                 this.$table.appendChild($tr);
+                // if(this.allCountItem){
+                //     this.showcount();
+                // }
             })
+        },
+        showcount(){
+            console.log('我执行了');
+            this.$countprice.innerHTML = '';
+            for(var i = 0; i < this.allCountItem.length; i++){
+                console.log(this.allCountItem[i].value);
+                countAll += parseInt(this.allCountItem[i].value) ;
+            }           
+            var $div = document.createElement('div');
+            $div.innerHTML = `
+                <p>共<i style="color:#f10180">${countAll}</i>件商品 商品金额</p><span style="color:#000">￥1415</span>
+                <p>总金额（未含运费）</p><span style="color:#f10180;font-size: 14px;">￥1415</span>
+            `;
+            this.$countprice.appendChild($div);
+
         }
     }
 
