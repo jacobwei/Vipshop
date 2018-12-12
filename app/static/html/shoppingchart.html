@@ -7,6 +7,7 @@
     <title>唯品会-我的购物袋</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/shoppingchart.css">
 </head>
 <body>
@@ -16,31 +17,189 @@
             <a class="left_logo" href="index.html">唯品会</a>
             <div class="right_service">
                 <div class="nav">
-                    <div class="username"><p>你好，厘米</p>
-                        <a href="">[退出]</a>
-                        <a href="">订单管理</a>
+                    <div class="username">
+                        <p style="display:inline;">你好，厘米</p>
+                        <a href="" style="margin-left:40px;">[退出]</a>
+                        <a href="" style="margin-left:18px;">订单管理</a>
                     </div>
-                    <span class="split-line"></span>
+                    <span class="split-line title_line"></span>
                     <div>
-                        <i class=""></i>
+                        <i class="shop vipicon-dianhua"></i>
                         400-6789-888
                     </div>
-                    <span class="split-line"></span>
+                    <span class="split-line title_line"></span>
                     <div>
-                        <i></i>
+                        <i class="shop vipicon-kefu"></i>
                         <a href="">在线客服</a>
                     </div>
-                    <span class="split-line"></span>
+                    <span class="split-line title_line"></span>
                     <div>
-                        <i></i>
+                        <i class="shop vipicon-huiyuan1"></i>
                         <a href="">会员服务</a>
                     </div>
                 </div>
-                <div class="promise"></div>
+                <div class="promise">
+                    <img src="../images/shoppingcart/promise.jpg" alt="">
+                </div>
             </div>
         </div>
     </div>
  <!-- 头部结束 -->
-
+ <div id="body_box">
+     <div class="body">
+<!-- 流程开始 -->
+             <div class="flow">
+                 <div class="step">
+                     <div class="step1_img"></div>
+                     <p style="color:#000;">查看购物袋</p>
+                 </div>
+                 <div class="stepline stepline_1"></div>
+                 <div class="step">
+                     <div class="step2_img"></div>
+                     <p style="color: #acb2b5;">确认订单信息</p>
+                 </div>
+                 <div class="stepline"></div>
+                 <div class="step">
+                     <div class="step3_img"></div>
+                     <p style="color: #acb2b5;">成功提交信息</p>
+                 </div>
+             </div>
+<!-- 流程结束 -->
+             <div class="tit">
+                <a href="" class="temai">特卖商品</a>
+                <div class="split-line tit_line"></div>
+                <a href="" class="yaopin">唯品医药</a>
+             </div>
+             <div class="peisong">
+                 <span>配送至<b style="font-weight:900;color:#000; font-size: 20px;"> 深圳 </b></span>
+                 <div class="split-line peisong_line"></div>
+                 <span style="font-size:14px;">请在倒计时结束前提交订单，下单后你另有30分钟的支付时间。</span>
+                 <i class="shop vipicon-question"></i>
+             </div>
+<!-- 购物车商品列表开始 -->
+             <div class="cart">
+                 <ul class="cart_thead">
+                    <li class="product" style="text-align:left;">精选特卖</li>
+                    <li class="price" style="width:300px;">单价</li>
+                    <li class="quantum" style="width:100px;">数量</li>
+                    <li class="subtotal" style="width:145px;">小计</li>
+                    <li class="action" style="width:100px;">操作</li>
+                 </ul>
+     <!-- 商品数据渲染在这 每一个tr -->                 
+                 <div class="cart_body">
+                    <table class="commodity">
+                        <tr class="goods">
+                            <td class="product_item">
+                                    <p class="goods_img"></p>
+        <!-- 商品名写在a标签里 -->   <p style="display:inline-block; height:34px;"><i style="color:#f10180">自营</i><div class="split-line goods_line"></div>
+                                         <a>女连帽可脱卸真毛领一手长收腰羽绒服</a>
+                                    </p>
+                                    <p style="margin-top:10px;width:50px;">尺码：S</p>
+                            </td>
+                            <td>
+        <!-- 现价 -->            <p style="font-weight:900;">￥699</p>
+        <!-- 原价 -->            <p style="text-decoration-line: line-through; color:#999;">￥1699</p>
+                            </td>
+                            <td>
+                                <div class="number">
+                                    <input type="button" name="sub" id="sub" value="-">
+                                    <input type="text" name="num" id="num" >
+                                    <input type="button" name="add" id="add" value="+">
+                                </div>
+                                <script>
+                                    var $add = document.getElementById('add');
+                                    var $num = document.getElementById('num');
+                                    var $sub = document.getElementById('sub');
+                                    var count = $num.value;
+                                    $add.onclick = function(){
+                                        count = $num.value;
+                                        count++;
+                                        $num.value = count;
+                                    }
+                                    $sub.onclick = function(){
+                                        count = $num.value;
+                                        count--;
+                                        if(count <= 1){
+                                            count = 1;
+                                        }
+                                        $num.value = count;
+                                    }
+                                </script>
+                            </td>
+                            <td>
+        <!-- 小计 -->            <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;">￥699</p>            
+                            </td>
+                            <td>
+        <!-- 删除按钮 -->         <a id="del" style="cursor:pointer;">删除</a>                  
+                            </td>
+                        </tr>
+                    </table>
+                 </div>
+                 <div class="yunfei">
+                     <span>运费</span>
+                     唯品会自营：唯品自营商品已满足新会员专享全场38元包邮
+                 </div>
+                 <div class="accounts">
+                     <div class="count">
+                         <div>
+                             <p>共<i style="color:#f10180">2</i>件商品 商品金额</p><span style="color:#000">￥1415</span>
+                             <p>总金额（未含运费）</p><span style="color:#f10180;font-size: 14px;">￥1415</span>
+                         </div>
+                     </div>
+                     <div class="btn">
+                         <input class="button" type="button" value="立即结算">
+                     </div>
+                 </div>
+             </div>
+<!-- 购物车商品列表结束 -->
+<!-- 三保证开始 -->
+        <div class="proimg">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+<!-- 三保证结束 -->
+    </div>
+</div>
+<!-- 尾部开始 -->
+<footer>
+        <div class="ft-cnt">        
+            <div class="ft-info">
+                <p class="ft-link">
+                    <a href="" title="关于我们">关于我们</a> |
+                    <a href="" title="About us">About us</a> |
+                    <a href="" title="Investor Relations">Investor Relations</a>|
+                    <a href="" title="媒体报道">媒体报道</a> |
+                    <a href="" title="品牌招商">品牌招商</a> |
+                    <a href="" title="隐私条款">隐私条款</a> |
+                    <a href="" title="唯品诚聘">唯品诚聘</a> |
+                    <a href="" title="唯品卡">唯品卡</a> |
+                    <a href="" title="联系我们">联系我们</a>
+                </p>
+                <p class="ft-text">
+                    <span>Copyright © 2008-2018 vip.com，All Rights Reserved 使用本网站即表示接受</span>
+                    <a href="">唯品会用户协议</a><span>。版权所有 </span><a href="">广州唯品会电子商务有限公司</a>
+                </p>
+                <p class="ft-text">
+                    <a href="" class="gong">粤公网安备 44010302111111号</a><a href="">粤ICP备08114786号</a><a href="">增值业务经营许可证：粤B2-20170777
+                    </a><a href="">网络文化经营许可证：粤网文〔2015〕1528-229</a>
+                </p>
+                <p class="ft-text">
+                    <a href="">自营主体经营证照</a><a href="">风险监测信息</a><a href="">互联网药品交易服务资格证（粤C20140002）</a>
+                </p>
+                <p class="ft-img">
+                    <a href="" class="ft-img1" title="银联特约商户"></a>
+                    <a href="" class="ft-img2" title="消费维权服务站"></a>
+                    <a href="" class="ft-img3" title="红盾电子链接标识"></a>
+                    <a href="" class="ft-img4" title="网络警察报警平台"></a>
+                    <a href="" class="ft-img5" title="公安局网络警察支队"></a>
+                    <a href="" class="ft-img6" title="诚信网站"></a>
+                    <a href="" class="ft-img7" title="可信网站"></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+<!-- 尾部结束 -->
+<!-- <script src="../js/shoppingchart.js"></script> -->
 </body>
 </html>

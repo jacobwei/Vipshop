@@ -24,11 +24,345 @@
     float: right;
 }
 .right_service .nav{
-
+    width: 570px;
+    height: 27px;
+    font-size: 12px;
+    color: #808080;
+    box-sizing: border-box;
+    padding: 13px;
+}
+.right_service .nav a{
+    color: #808080;
+}
+.right_service .nav div{
+    display: inline-block;
+}
+.nav a:hover{
+    color: #000;
+}
+.nav .username{
+    float: left; 
+}
+.title_line{
+    width: 1px;
+    height: 12px;
+    margin: 0 12px;
 }
 .split-line{
     display: inline-block;
+    background: #b3b3b3;
     width: 1px;
     height: 12px;
-    background: #b3b3b3;
+    vertical-align: middle;
+}
+.promise{
+    margin: 15px;
+    float: right;
+}
+#body_box{
+    background: #ffffff;
+}
+.body{
+    width: 960px;
+    margin: 0 auto;
+}
+.flow{
+    width: 960px;
+    height: 140px;
+    box-sizing: border-box;
+    padding: 30px 178px;
+}
+.step{
+    float: left;
+    width: 100px;
+    height: 84px;
+}
+.step p{
+    font-size: 14px;
+    text-align: center;
+}
+.stepline{
+    float: left;
+    width: 152px;
+    height: 50px;
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: -306px -145px;
+}
+.step1_img{
+    width: 100px;
+    height: 50px;
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: -364px -290px;
+}
+.step2_img{
+    width: 100px;
+    height: 50px;
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: -468px -290px;
+}
+.step3_img{
+    width: 100px;
+    height: 50px;
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: -462px -199px;
+}
+.stepline_1{
+    width: 152px;
+    height: 50px;
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: 0 -290px;
+}
+.tit{
+    line-height: 59px;
+    height: 59px;
+    border-bottom: 1px solid #b3b3b3;
+}
+.tit .temai{
+    display: inline-block;
+    font-size:16px;
+    font-weight: 900;
+    text-align: center;
+    color:#f10180; 
+    width: 84px;
+    height: 59px;
+    box-sizing: border-box;
+    border-bottom:3px solid #f10180;
+}
+.tit .yaopin{
+    font-weight: 900;
+    text-align: center;
+    display: inline-block;
+    font-size:16px; 
+    color:#000;
+}
+.tit_line{
+    margin:0 10px;
+    width: 1px;
+    height: 20px;
+    vertical-align: middle;
+}
+.peisong{
+    height: 85px;
+    line-height: 85px;
+    font-size: 18px;
+    color: #333;
+}
+.peisong_line{
+    width: 1px;
+    height: 18px;
+    margin:0 16px;
+    vertical-align: middle;
+}
+.vipicon-question{
+    color: #2d89f8;
+}
+.cart_thead{
+    height: 40px;
+    line-height: 40px;
+    background: #f9f9f9;
+    border:1px solid #e0e0e0;
+    border-left: 3px solid #f10180;
+}
+.cart_thead li{
+    text-align: center;
+    float: left;
+}
+.product{
+    padding-left: 14px;
+    width: 283px;
+    color: #f10180;
+    font-size: 16px;
+}
+.cart_body{
+    border-left:1px solid #e0e0e0;
+    border-right:1px solid #e0e0e0;
+}
+
+.yunfei{
+    font-size: 11px;
+    color: #666666;
+    height: 50px;
+    border:1px solid #e0e0e0;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+.yunfei span{
+    width: 46px;
+    height: 20px;
+    display: inline-block;
+    background:#ff9933;
+    border-radius: 1px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    box-sizing: border-box;
+    margin:0 16px 10px;
+    line-height: 20px;
+}
+.accounts{
+    width: 100%;
+    height: 163px;
+    margin-top:40px;
+    border: 1px solid #e2e1e1;
+    box-sizing: border-box;
+}
+.count{
+    width: 100%;
+    height: 113px;
+
+}
+.count div{
+    float: right;
+    color: #888888;
+    font-size: 12px;
+    width: 252px;
+    height: 113px;
+    box-sizing: border-box;
+    padding:22px;
+    background: #ffffff;
+}
+.count div p{
+    margin-bottom: 15px;
+    float: left;
+}
+.count div span{
+    float: right;
+}
+.btn{
+    height: 50px;
+    background: #f3f3f3;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+}
+.btn .button{
+    float: right;
+    width: 251px;
+    height: 48px;
+    background: #f10180;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.proimg{
+    width:100%;
+    height: 141px;
+    margin: 80px 0;
+}
+.proimg p{
+    float: left;
+    width: 302px;
+    height: 141px;
+}
+.proimg p:nth-child(1){
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: 0 0 ;
+}
+.proimg p:nth-child(2){
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: -306px 0 ;
+    margin: 0 27px;
+}
+.proimg p:nth-child(3){
+    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background-position: 0 -145px ;
+}
+#footer_box{
+    height: 194px;
+}
+.footer{
+    width: 960px;
+    margin: 0 auto;
+}
+.goods{
+    display: inline-block;
+    height: 96px;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+.goods td{
+    float: left;
+}
+.goods td p{
+    float: left;
+}
+.goods_line{
+    float: left;
+    margin:0 9px 0 5px;
+}
+.goods_img{
+    width: 58px;
+    height: 74px;
+    border: 1px solid #f0f0f0;
+    background: url(../images/shoppingcart/shangpin.jpg);
+    background-size: 100%;
+    margin-right: 14px;
+}
+.goods .product_item {
+    width: 300px;
+    font-size:12px; 
+    box-sizing: border-box;
+    padding-left: 25px ;
+}
+.goods .product_item a{
+    width:138px; 
+    line-height:17px;
+    color: #000;
+    float: left;
+    /* display: inline; */
+    /* display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-orient:vertical;
+    overflow:hidden; */
+}
+.goods td:nth-of-type(2) {
+    text-align: center;
+    width: 300px;
+}
+.goods td:nth-of-type(2) p{
+    width: 300px;
+    line-height: 20px;
+}
+.goods td:nth-of-type(3) {
+    width: 100px;
+}
+.number{
+    width: 76px;
+    height: 24px;
+    box-sizing: border-box;
+    border: 1px solid #e3e2e2;
+    margin:0 auto;
+
+}
+.number input{
+    float: left;
+}
+.number #add{
+    width: 22px;
+    height: 22px;
+    background:#fff;
+    border: 0;
+}
+.number #num{
+    width: 28px;
+    height: 22px;
+    border:0;
+    border-left:1px solid #e3e2e2;
+    border-right:1px solid #e3e2e2;
+}
+.number #sub{
+    width: 22px;
+    height: 22px;
+    background:#fff;
+    border: 0;
+}
+.goods td:nth-of-type(4) {
+    width: 145px;
+    text-align: center;
+}
+.goods td:nth-of-type(5) {
+    width: 100px;
+    text-align:center;
 }
