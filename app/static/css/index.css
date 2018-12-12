@@ -1,0 +1,20 @@
+
+.main_wrapper{
+    width: 1920px;
+    height: 2666px;
+    margin: 0 auto; 
+    background: url(../images/index/index_bg.jpg) no-repeat center;   
+}
+.content{
+    width: 1000px;
+    margin: 0 auto;
+}
+.haohuo{
+    
+}
+.zhijiang{
+
+}
+.djs{
+    height: 50px;
+}
