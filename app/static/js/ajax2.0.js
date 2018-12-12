@@ -27,13 +27,15 @@ var getXHR = function () {
 //  解决get请求的缓存问题
 function sendAjax(url, obj) {
     const xhr = getXHR();
-    const _default = {
+    const _default = { 
         method: 'GET',
-        data: null
+        data:null
     }
-    for(var key in _default) {
-        if(key in obj) {
-            _default[key] = obj[key];
+    if(obj){
+        for(var key in _default) {
+            if(key in obj) {
+                _default[key] = obj[key];
+            }
         }
     }
     _default.method = _default.method.toUpperCase()
@@ -65,9 +67,12 @@ function sendAjax(url, obj) {
                 if(xhr.status == 200) {
                     let data = xhr.response;   
                     resolve(data);
+                    console.log('发送成功');
                 } else {
                     let data = xhr.response;   
                     reject(data);
+                    console.log('发送失败');
+
                 }
             }
         }
