@@ -85,56 +85,9 @@
                     <li class="subtotal" style="width:145px;">小计</li>
                     <li class="action" style="width:100px;">操作</li>
                  </ul>
-     <!-- 商品数据渲染在这 每一个tr -->                 
                  <div class="cart_body">
-                    <table class="commodity">
-                        <tr class="goods">
-                            <td class="product_item">
-                                    <p class="goods_img"></p>
-        <!-- 商品名写在a标签里 -->   <p style="display:inline-block; height:34px;"><i style="color:#f10180">自营</i><div class="split-line goods_line"></div>
-                                         <a>女连帽可脱卸真毛领一手长收腰羽绒服</a>
-                                    </p>
-        <!--尺码 -->                <p style="margin-top:10px;width:50px;">尺码：S</p>
-                            </td>
-                            <td>
-        <!-- 现价 -->            <p style="font-weight:900;">￥699</p>
-        <!-- 原价 -->            <p style="text-decoration-line: line-through; color:#999;">￥1699</p>
-                            </td>
-                            <td>
-                                <div class="number">
-                                    <input type="button" name="sub" id="sub" value="-">
-                                    <input type="text" name="count" id="count" value="1" >
-                                    <input type="button" name="add" id="add" value="+">
-                                </div>
-                                <!-- <script>
-                                    var $table = document.querySelector('.commodity');
-                                    var count = $count.value;
-                                    $table.onclick = function(e){
-                                        e = e || window.event;
-                                        var target = e.target || e.srcElement;
-                                        if(target.id == "add"){
-                                            count = target.previousElementSibling.value;
-                                            count++;                                            
-                                            target.previousElementSibling.value = count;                                           
-                                        }else if(target.id == "sub"){
-                                            count = target.nextElementSibling.value;
-                                            count--;
-                                            if(count <= 1){
-                                                count = 1;
-                                            }
-                                            target.nextElementSibling.value = count;
-                                        }
-                                    }
-                                    
-                                </script> -->
-                            </td>
-                            <td>
-        <!-- 小计 -->            <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;">￥699</p>            
-                            </td>
-                            <td>
-        <!-- 删除按钮 -->         <a id="del" style="cursor:pointer;">删除</a>                  
-                            </td>
-                        </tr>
+                     <table class="commodity">
+                            <!-- 商品数据渲染在这 每一个tr -->                                    
                     </table>
                  </div>
                  <div class="yunfei">

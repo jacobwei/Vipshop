@@ -32,14 +32,12 @@
                             var father = target.parentNode;
                             var count = father.querySelector('.count').value;
                             // 从商品数据中,获取对应这一个商品的数据
-                            _this.data[father.index].count = count;
+                            _this.data[father.index].count =Number(count) ;
                             _this.setItem(_this.data[father.index]);
                         }
-
                     }
                 },
                 getData() {
-                    console.log(1);
                     sendAjax('../../../server/json/goodsdata.json').then(res => {
                         res = JSON.parse(res);
                         console.log(1);
@@ -53,17 +51,17 @@
                     });
                 },
                 insertData(data) {
-                    console.log(data);
+                    // console.log(data);
                     // 循环数组
                     for(let i= 0; i < data.length; i++ ) {
                         var $li = document.createElement('li');
                         $li.index = i;
                         $li.innerHTML = `
                             商品名称:<span class='product'>${data[i].product}</span></br>
-                            商品尺寸<span class='size'>${data[i].size}</span></br>
-                            商品现价<span class='price-now'>${data[i].price_now}</span></br>
-                            商品原价<span class='price-before'>${data[i].price_before}</span></br>
-                            购买数量<input class="count" placeholder="请输入数量" /></br>
+                            商品尺寸:<span class='size'>${data[i].size}</span></br>
+                            商品现价:<span class='price-now'>${data[i].price_now}</span></br>
+                            商品原价:<span class='price-before'>${data[i].price_before}</span></br>
+                            购买数量:<input class="count" placeholder="请输入数量" /></br>
                             <button>加入购物车</button>
                         `
                         $ul.appendChild($li);
@@ -76,7 +74,16 @@
                     var shopList = localStorage.getItem('shopList') || '[]';
                     shopList = JSON.parse(shopList);
                     // 在把新数据push到原有数据
-                    shopList.push(data);
+                    for(var i = 0; i < shopList.length; i++) {
+                        if(data.id == shopList[i].id) {
+                    // 此商品已经存在
+                            shopList[i].count += data.count;
+                            break;
+                        }
+                    }
+                    if(i == shopList.length){
+                        shopList.push(data);
+                    }
                     // 在把全部数据存到本地
                     localStorage.shopList = JSON.stringify(shopList);
                     // console.log(shopList);
