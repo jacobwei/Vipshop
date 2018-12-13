@@ -110,7 +110,7 @@
     font-weight: 700;
 }
 .detail_price{
-    background: url(../images/detail/detail_price_bg.png) no-repeat #faf5f8;
+    background: url(/Vipshop/app/static/images/detail/detail_price_bg.png) no-repeat #faf5f8;
 }
 .pbox_price_show,.peisong,.yunfei,.xzcolor,.xzsize,.xzshuliang{
     height: 50px;

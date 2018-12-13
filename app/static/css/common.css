@@ -202,7 +202,7 @@ header .word .change-suc .cnt p i{
     margin-right: 6px;
     width: 42px;
     height: 42px;
-    background: url(../images/gou.jpg);
+    background: url(/Vipshop/app/static/images/gou.jpg);
     vertical-align: middle;
 }
 header i.vipicon-up{
@@ -284,7 +284,7 @@ header ul.nav-list>li.dao .qian .day div{
     z-index: 6;
     width: 24px;
     height: 100%;
-    background-image: url(../images/sprites-hash-9b207a41.png);
+    background-image: url(/Vipshop/app/static/images/sprites-hash-9b207a41.png);
 }
 header ul.nav-list>li.dao .qian .day div:nth-child(1){
     background-position: -220px -184px;
@@ -338,7 +338,7 @@ header ul.nav-list>li i.git{
     top: 2px;
     width: 15px;
     height: 18px;
-    background: url(../images/header_gift.gif);
+    background: url(/Vipshop/app/static/images/header_gift.gif);
 }
 header li.la:hover i.vipicon-up{
     transform: rotateZ(180deg);
@@ -389,7 +389,7 @@ header .nav-list .top-hid.deng .hd-login i{
     width: 38px;
     height: 38px;
     margin-right: 10px;
-    background: url(../images/sprites-hash-9b207a41.png) -164px -142px;
+    background: url(/Vipshop/app/static/images/sprites-hash-9b207a41.png) -164px -142px;
     border-radius: 50%;
 }
 header .nav-list .top-hid.deng .hd-list{
@@ -747,7 +747,7 @@ nav .nav_cnt .li_current{
     width: 235px;
     height: 495px;
     float: right;
-    background: url(../images/pop_bg.png);
+    background: url(/Vipshop/app/staticimages/pop_bg.png);
 }
 
 /* 尾部样式 */
@@ -771,7 +771,7 @@ footer .ft-cnt .ft-vip li{
     margin-left: 10px;
     width: 58px;
     height: 75px;
-    background: url(../images/ft_services.png) no-repeat;
+    background: url(/Vipshop/app/staticimages/ft_services.png) no-repeat;
 }
 footer .ft-cnt .ft-vip li:nth-child(2){
     background-position: -80px 0;
@@ -864,7 +864,7 @@ footer .ft-cnt .ft-info .ft-text a:hover{
     color: #f10180;
 }
 footer .ft-cnt .ft-info .ft-text a.gong::before{
-    content: url(../images/gongan.png);
+    content: url(/Vipshop/app/static/images/gongan.png);
     padding-right: 2px;
 }
 footer .ft-cnt .ft-info .ft-img{
@@ -876,7 +876,7 @@ footer .ft-cnt .ft-info .ft-img{
 footer .ft-cnt .ft-info .ft-img a{
    margin-right: 10px;
     height: 40px;
-    background: url(../images/ft_beian.png);
+    background: url(/Vipshop/app/static/images/ft_beian.png);
 }
 footer .ft-cnt .ft-info .ft-img a.ft-img1{
     width: 105px;
@@ -1077,7 +1077,7 @@ aside .login-wrap .message>div .mess{
     width: 26px;
     height: 26px;
     margin: 10px auto;
-    background: url(../images/mess.png);
+    background: url(/Vipshop/app/static/images/mess.png);
 }
 aside .login-wrap .message>div.my-mess .mess{
     background-position: 0 -26px;
@@ -1115,7 +1115,7 @@ footer .ft-cnt .ft-vip li{
     margin-left: 10px;
     width: 58px;
     height: 75px;
-    background: url(../images/ft_services.png) no-repeat;
+    background: url(/Vipshop/app/static/images/ft_services.png) no-repeat;
 }
 footer .ft-cnt .ft-vip li:nth-child(2){
     background-position: -80px 0;
@@ -1208,7 +1208,7 @@ footer .ft-cnt .ft-info .ft-text a:hover{
     color: #f10180;
 }
 footer .ft-cnt .ft-info .ft-text a.gong::before{
-    content: url(../images/gongan.png);
+    content: url(/Vipshop/app/static/images/gongan.png);
     padding-right: 2px;
 }
 footer .ft-cnt .ft-info .ft-img{
@@ -1220,7 +1220,7 @@ footer .ft-cnt .ft-info .ft-img{
 footer .ft-cnt .ft-info .ft-img a{
    margin-right: 10px;
     height: 40px;
-    background: url(../images/ft_beian.png);
+    background: url(/Vipshop/app/static/images/ft_beian.png);
 }
 footer .ft-cnt .ft-info .ft-img a.ft-img1{
     width: 105px;

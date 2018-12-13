@@ -13,14 +13,14 @@
     height: 63px;
     margin-top: 30px;
     text-indent:-9999px;
-    background:url(../images/rigister/zhuce_03.jpg)no-repeat;
+    background:url(/Vipshop/app/static/images/rigister/zhuce_03.jpg)no-repeat;
 }
 .header .promise{
     float: right;
     width: 370px;
     height: 29px;
     margin-top: 50px;
-    background:url(../images/rigister/zhuce_06.jpg)no-repeat;
+    background:url(/Vipshop/app/static/images/rigister/zhuce_06.jpg)no-repeat;
 }
 #main_box{
     height:810px;
@@ -30,7 +30,7 @@
     margin: 0 auto;
     width: 1250px;
     height: 100%;
-    background:url(../images/rigister/banner_03.jpg)no-repeat;
+    background:url(/Vipshop/app/static/images/rigister/banner_03.jpg)no-repeat;
 }
 .main .login{
     width: 450px;
@@ -92,7 +92,7 @@
     display: block;
     width: 155px;
     height: 155px;
-    background: url(../images/rigister/login_sweep_03.jpg)no-repeat;
+    background: url(/Vipshop/app/static/images/rigister/login_sweep_03.jpg)no-repeat;
 }
 .phone{
     display: none;
@@ -107,7 +107,7 @@
     display: inline-block;
     width: 150px;
     height: 240px;
-    background: url(../images/rigister/login_phone_03.jpg)no-repeat;
+    background: url(/Vipshop/app/static/images/rigister/login_phone_03.jpg)no-repeat;
 }
 .login_sweep p{
     width: 450px;
@@ -222,7 +222,7 @@
     left: 162px;
     width: 40px;
     height: 40px;
-    background: url(../images/rigister/sprites-hash-701a8168.png) no-repeat;
+    background: url(/Vipshop/app/static/images/rigister/sprites-hash-701a8168.png) no-repeat;
     background-position:-300px -161px; 
 }
 .foot_main ul{

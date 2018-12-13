@@ -16,7 +16,7 @@
     float: left;
     width: 194px;
     height: 48px;
-    background: url(../images/shoppingcart/sprites-hash-bce65243.png)no-repeat;
+    background: url(/Vipshop/app/static/images/shoppingcart/sprites-hash-bce65243.png)no-repeat;
     background-position-x: -288px;
 }
 .header .right_service{
@@ -85,31 +85,31 @@
     float: left;
     width: 152px;
     height: 50px;
-    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background: url(/Vipshop/app/static/images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
     background-position: -306px -145px;
 }
 .step1_img{
     width: 100px;
     height: 50px;
-    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background: url(/Vipshop/app/static/images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
     background-position: -364px -290px;
 }
 .step2_img{
     width: 100px;
     height: 50px;
-    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background: url(/Vipshop/app/static/images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
     background-position: -468px -290px;
 }
 .step3_img{
     width: 100px;
     height: 50px;
-    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background: url(/Vipshop/app/static/images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
     background-position: -462px -199px;
 }
 .stepline_1{
     width: 152px;
     height: 50px;
-    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background: url(/Vipshop/app/static/images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
     background-position: 0 -290px;
 }
 .tit{
@@ -257,16 +257,16 @@
     height: 141px;
 }
 .proimg p:nth-child(1){
-    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background: url(/Vipshop/app/static/images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
     background-position: 0 0 ;
 }
 .proimg p:nth-child(2){
-    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background: url(/Vipshop/app/static/images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
     background-position: -306px 0 ;
     margin: 0 27px;
 }
 .proimg p:nth-child(3){
-    background: url(../images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
+    background: url(/Vipshop/app/static/images/shoppingcart/sprites-hash-26c6eaee.png)no-repeat;
     background-position: 0 -145px ;
 }
 #footer_box{
@@ -296,7 +296,7 @@
     width: 58px;
     height: 74px;
     border: 1px solid #f0f0f0;
-    background: url(../images/shoppingcart/shangpin.jpg);
+    background: url(/Vipshop/app/static/images/shoppingcart/shangpin.jpg);
     background-size: 100%;
     margin-right: 14px;
 }

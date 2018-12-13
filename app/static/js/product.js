@@ -8,7 +8,7 @@ var shop = (function () {
     console.log($goumai);
     return {
         init() {
-            insertData();
+           // insertData();
             this.event();
             // this.getData();
         },
