@@ -1,4 +1,5 @@
 <?php   
+        header("ALLOW-CONTROL-ALLOW-ORIGIN:*");
         //获取用户名、密码
         $user = $_POST["username"];
         $psw = $_POST["userpassword"];  
@@ -12,7 +13,7 @@
         else  */ 
         {  
 
-            $coon = new mysqli('localhost', 'root', '', 'vipshop_userinfo', 3306);
+            $coon = new mysqli('10.36.141.211', 'root', '', 'vipshop_userinfo', 3306);
             $sql = "SELECT username,userpwd FROM userinfo where username = '$user' and userpwd = '$psw'";  
             $coon->query("SET CHARACTER SET 'utf8'");//读库   
             $coon->query("SET NAMES 'utf8'");//写库 

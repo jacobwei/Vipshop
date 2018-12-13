@@ -91,7 +91,6 @@
 }
 .list_box{
     width: 1000px;
-
 }
 .list_item{
     float: left;
@@ -100,7 +99,9 @@
     margin: 16px 16px 0 0;
     border: solid 1px #e0e0e0;
     overflow: hidden;
+    cursor: pointer;
 }
+
 .list_item img{
     display: inline;
     /* width: 226px;
