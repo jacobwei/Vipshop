@@ -113,11 +113,13 @@ gulp.task('build', function (callback) {
         callback);
 });
 
-gulp.task('default',['clean','all','watch','connect'])
+gulp.task('dev',['clean','all','watch','connect'])
 
 //把sass转为css文件
 gulp.task('sass', function () {
     return gulp.src('app/static/css/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist/css'));
-})
+});
+
+

@@ -43,7 +43,7 @@ var shop = (function() {
                 goodObj = JSON.stringify(goodObj)
                 localStorage.setItem("goodsList",goodObj);
                 // 跳转到商品详情页面
-                window.open("../html/product.html");
+                window.open("/Vipshop/app/statichtml/product.html");
             }
         },
 
