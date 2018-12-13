@@ -1,26 +1,28 @@
 var shopCar = (function () {
+    // var countAll =0;
     return {
         init() {
             this.$table = document.querySelector('.commodity');
+            this.$countprice = document.querySelector('.count');
             this.getData();
             this.$count = document.querySelector('#count');
-            this.
-            this.count = this.$count.value ;
+            this.count = this.$count.value;
             this.event();
         },
         event() {
             var _this = this;
             this.$count.oninput = function (e) {
+                console.log(1);
                 e = e || window.event;
                 var target =  e.target || e.srcElement;
                 var index = target.parentNode.parentNode.parentNode.index;                  
-                console.log(index);
                 if(target.id === 'count') {
                     var data = _this.data[index];
                     data.count = Number(target.value);
                     localStorage.shopList = JSON.stringify(_this.data);
                     target.parentNode.parentNode.parentNode.remove();
                     _this.insertData(_this.data);
+                    // _this.showcount();
                 } 
             }
             this.$table.onclick = function(e){
@@ -31,7 +33,7 @@ var shopCar = (function () {
                     _this.data.splice(deltr.index, 1);
                     deltr.remove();
                     localStorage.shopList = JSON.stringify(_this.data);
-
+                    _this.showcount();
                 }else if(target.id == "add"){
                     _this.count = target.previousElementSibling.value;
                     _this.count++;                                            
@@ -41,7 +43,8 @@ var shopCar = (function () {
                     data.count = _this.count;
                     localStorage.shopList = JSON.stringify(_this.data);
                     target.parentNode.parentNode.parentNode.remove();
-                    _this.insertData(_this.data);                                           
+                    _this.insertData(_this.data);
+                    // countAll++;                                           
                 }else if(target.id == "sub"){
                     _this.count = target.nextElementSibling.value;
                     _this.count--;
@@ -54,8 +57,8 @@ var shopCar = (function () {
                     data.count = _this.count;
                     localStorage.shopList = JSON.stringify(_this.data);
                     target.parentNode.parentNode.parentNode.remove();
-                    _this.insertData(_this.data);                                           
-
+                    _this.insertData(_this.data);  
+                    // countAll--;                                                                                    
                 }
             }
         },
@@ -87,19 +90,38 @@ var shopCar = (function () {
         <td>
             <div class="number">
                 <input type="button" name="sub" id="sub" value="-">
-                <input type="text" name="count" id="count" value="${data[index].count}" >
+                <input type="text" name="count" id="count" class="countitem" value="${data[index].count}" >
                 <input type="button" name="add" id="add" value="+">
             </div>
         </td>
         <td>
-<!-- 小计 -->    <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;">￥${data[index].price_now * data[index].count}</p>            
+<!-- 小计 -->    <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;" class="money">￥${data[index].price_now * data[index].count}</p>            
         </td>
         <td>
 <!-- 删除按钮 --> <a id="del" style="cursor:pointer;">删除</a>                  
         </td>
                 `;
                 this.$table.appendChild($tr);
+                this.showcount();               
             })
+        },
+        showcount(){
+            var countAll = 0;
+            var moneyAll = 0;
+            var allCountItem = document.querySelectorAll('.countitem');
+            var money = document.querySelectorAll('.money');
+            this.$countprice.innerHTML = '';
+            for(var i = 0; i < allCountItem.length; i++){
+                countAll += parseInt(allCountItem[i].value) ;
+                moneyAll += Number(money[i].innerHTML.substr(1));
+            } 
+            var $div = document.createElement('div');
+            $div.innerHTML = `
+                <p>共<i style="color:#f10180">${countAll}</i>件商品 商品金额</p><span style="color:#000">￥${moneyAll}</span>
+                <p>总金额（未含运费）</p><span style="color:#f10180;font-size: 14px;">￥${moneyAll}</span>
+            `;
+            this.$countprice.appendChild($div);
+
         }
     }
 
