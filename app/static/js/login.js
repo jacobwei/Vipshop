@@ -91,12 +91,6 @@ var login = (function () {
                 console.log(_this.$inputAll['username'].value);
                 console.log(_this.$inputAll['userpassword'].value);
                 // alert('登录成功');
-                // sendAjax('http://10.36.141.211:3306/Vipshop/server/php/login.php',
-                // 'post',
-                // {
-                //     "username":_this.$inputAll['username'].value,
-                //     "userpassword":_this.$inputAll['userpassword'].value
-                // })
             }
 /* 提交登录--结束 */
 
