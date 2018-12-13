@@ -1,9 +1,12 @@
 
 .main_wrapper{
-    width: 1920px;
+    height: 2666px;
+    background: #310155;
+}
+.all_content{
+    width: 1000px;
     height: 2666px;
     margin: 0 auto; 
-    background: url(../images/index/index_bg.jpg) no-repeat;   
 }
 .content{
     width: 1000px;
@@ -12,9 +15,9 @@
 .haohuo,.zhijiang{
     margin-top: -3px;
 }
-.djs{
+/* .djs{
     height: 50px;
-}
+} */
 .jx_item{
     width: 150px;
     height: 189px;
