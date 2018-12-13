@@ -1,5 +1,5 @@
 var shopCar = (function () {
-    var countAll =0;
+    // var countAll =0;
     return {
         init() {
             this.$table = document.querySelector('.commodity');
@@ -7,8 +7,6 @@ var shopCar = (function () {
             this.getData();
             this.$count = document.querySelector('#count');
             this.count = this.$count.value;
-            this.allCountItem = document.querySelectorAll('.countitem');
-            console.log(this.allCountItem);
             this.event();
         },
         event() {
@@ -35,7 +33,7 @@ var shopCar = (function () {
                     _this.data.splice(deltr.index, 1);
                     deltr.remove();
                     localStorage.shopList = JSON.stringify(_this.data);
-
+                    _this.showcount();
                 }else if(target.id == "add"){
                     _this.count = target.previousElementSibling.value;
                     _this.count++;                                            
@@ -97,29 +95,30 @@ var shopCar = (function () {
             </div>
         </td>
         <td>
-<!-- 小计 -->    <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;">￥${data[index].price_now * data[index].count}</p>            
+<!-- 小计 -->    <p style="color:#f10180;font-weight:900;margin:0 auto;width:145px;" class="money">￥${data[index].price_now * data[index].count}</p>            
         </td>
         <td>
 <!-- 删除按钮 --> <a id="del" style="cursor:pointer;">删除</a>                  
         </td>
                 `;
                 this.$table.appendChild($tr);
-                // if(this.allCountItem){
-                //     this.showcount();
-                // }
+                this.showcount();               
             })
         },
         showcount(){
-            console.log('我执行了');
+            var countAll = 0;
+            var moneyAll = 0;
+            var allCountItem = document.querySelectorAll('.countitem');
+            var money = document.querySelectorAll('.money');
             this.$countprice.innerHTML = '';
-            for(var i = 0; i < this.allCountItem.length; i++){
-                console.log(this.allCountItem[i].value);
-                countAll += parseInt(this.allCountItem[i].value) ;
-            }           
+            for(var i = 0; i < allCountItem.length; i++){
+                countAll += parseInt(allCountItem[i].value) ;
+                moneyAll += Number(money[i].innerHTML.substr(1));
+            } 
             var $div = document.createElement('div');
             $div.innerHTML = `
-                <p>共<i style="color:#f10180">${countAll}</i>件商品 商品金额</p><span style="color:#000">￥1415</span>
-                <p>总金额（未含运费）</p><span style="color:#f10180;font-size: 14px;">￥1415</span>
+                <p>共<i style="color:#f10180">${countAll}</i>件商品 商品金额</p><span style="color:#000">￥${moneyAll}</span>
+                <p>总金额（未含运费）</p><span style="color:#f10180;font-size: 14px;">￥${moneyAll}</span>
             `;
             this.$countprice.appendChild($div);
 
