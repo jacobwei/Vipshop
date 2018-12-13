@@ -1,9 +1,12 @@
 
+.main{
+
+}
 .main_wrapper{
-    width: 1920px;
-    height: 2666px;
+    width: 1000px;
+    /* height: 2666px;  */
     margin: 0 auto; 
-    background: url(../images/index/index_bg.jpg) no-repeat;   
+    background: url(../images/index/index_bg.jpg) no-repeat center top;   
 }
 .content{
     width: 1000px;
@@ -110,7 +113,7 @@
 }
 .list_item_text{
     height: 116px;
-    padding: 30px 15px 10px 15px;
+    padding: 10px 15px 10px 15px;
     position: relative;
 }
 .weipinjia, .rmb, .pro_price, .icount, .pbox_market, .isize, .b_price, .pbox_off, .size, .count{
