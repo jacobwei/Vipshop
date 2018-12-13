@@ -2,7 +2,7 @@
     header("ALLOW-CONTROL-ALLOW-ORIGIN:*");
     $phone = $_POST['phone'];
     $pwd = $_POST['password'];
-    $coon = new mysqli('10.36.141.211', 'root', '', 'vipshop_userinfo', 3306);
+    $coon = new mysqli('localhost', 'root', '', 'vipshop_userinfo', 3306);
     $sql = "SELECT userphone FROM userinfo where userphone = '$phone'";//查询语句：数据库中是否存在该号码
     $coon->query("SET CHARACTER SET 'utf8'");//读库   
     $coon->query("SET NAMES 'utf8'");//写库 

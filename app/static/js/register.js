@@ -145,6 +145,13 @@ var register = (function () {
                         return false;
                     }
                 }
+                // sendAjax(
+                //     'http://10.36.141.211:3306/Vipshop/server/php/register.php',
+                //     {
+                //         "phone":_this.$phone.value,
+                //         "password":_this.$password.value
+                //     }
+                // )
                 // alert('注册成功');
             }
             /* 提交注册--结束 */
