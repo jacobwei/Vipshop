@@ -118,7 +118,7 @@
 }
 .weipinjia, .rmb, .pro_price, .icount, .pbox_market, .isize, .b_price, .pbox_off, .size, .count{
     color: 5a5d5a;
-    font-size: 16px;
+    font-size: 12px;
 }
 .pbox_price_show, .dicount_box, .list_item_size, .list_item_count{
     /* background: #ff40b1; */
@@ -133,6 +133,11 @@
     width: 100%;
     height: 28px;
     border: solid 1px #f10180;
-    display: block;
+    display: block; 
     margin-top: 10px;
+}
+.list_item_title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
